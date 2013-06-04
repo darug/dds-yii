@@ -14,3 +14,28 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/dds_yii/
 ---
+2013/06/04 12:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/06/04 12:31:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/06/04 12:32:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/06/04 12:56:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dds-yii.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
