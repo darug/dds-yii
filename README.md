@@ -1,4 +1,4 @@
-dds-yii
+dds-yii project
 =======
 
-dds-yii
+simple CMS functionality with yii
