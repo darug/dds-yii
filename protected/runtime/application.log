@@ -39,3 +39,345 @@ Stack trace:
 REQUEST_URI=/dds_yii/
 ---
 2013/06/04 12:56:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dds-yii.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2013/06/04 13:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/06/05 08:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/06/05 08:07:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/index.php?r=gii
+---
+2013/06/05 08:22:06 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in D:\wamp\www\dds_yii\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 D:\wamp\www\dds_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#2 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('')
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/dds_yii/index.php?r=gii
+---
+2013/06/05 08:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "param".' in D:\wamp\www\dds_yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(270): CController->missingAction('param')
+#1 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('param')
+#2 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/param')
+#3 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dds_yii/index.php/content/param
+---
+2013/06/05 08:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "param".' in D:\wamp\www\dds_yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(270): CController->missingAction('param')
+#1 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('param')
+#2 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/content/p...')
+#3 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dds_yii/index.php/admin/content/param
+---
+2013/06/05 08:47:13 [error] [php] Undefined variable: params (D:\wamp\www\dds_yii\protected\controllers\ContentController.php:9)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#2 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#3 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (9)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 08:49:53 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "findByName".' in D:\wamp\www\dds_yii\framework\base\CComponent.php:265
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('findByName', Array)
+#1 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(10): CActiveRecord->__call('findByName', Array)
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(10): Content->findByName('kapcsolat')
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+---
+2013/06/05 08:52:31 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "findByName".' in D:\wamp\www\dds_yii\framework\base\CComponent.php:265
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('findByName', Array)
+#1 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(9): CActiveRecord->__call('findByName', Array)
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(9): Content->findByName('kapcsolat')
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+---
+2013/06/05 08:54:43 [error] [php] Undefined variable: content (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 08:55:16 [error] [php] Undefined variable: content (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 08:55:18 [error] [php] Undefined variable: content (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 08:58:49 [error] [php] Undefined variable: model (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 08:58:58 [error] [php] Undefined variable: content (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 08:59:15 [error] [php] Undefined variable: content (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsolat
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 09:00:29 [error] [php] Trying to get property of non-object (D:\wamp\www\dds_yii\protected\views\content\index.php:8)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(869): ContentController->renderFile()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(782): ContentController->renderPartial()
+#2 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(14): ContentController->render()
+#3 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#6 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#7 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#8 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+in D:\wamp\www\dds_yii\protected\views\content\index.php (8)
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (14)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 09:02:15 [error] [php] include(ControllerException.php): failed to open stream: No such file or directory (D:\wamp\www\dds_yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(13): spl_autoload_call()
+#1 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#6 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (13)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 09:02:23 [error] [php] include(CControllerException.php): failed to open stream: No such file or directory (D:\wamp\www\dds_yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(13): spl_autoload_call()
+#1 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#6 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (13)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 09:02:29 [error] [exception.Exception] exception 'Exception' with message '404 error' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+---
+2013/06/05 09:04:16 [error] [php] include(ExceptionController.php): failed to open stream: No such file or directory (D:\wamp\www\dds_yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(13): spl_autoload_call()
+#1 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#6 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (13)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 09:04:24 [error] [php] include(ExceptionCController.php): failed to open stream: No such file or directory (D:\wamp\www\dds_yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\wamp\www\dds_yii\protected\controllers\ContentController.php(13): spl_autoload_call()
+#1 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(286): ContentController->runAction()
+#4 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#6 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+in D:\wamp\www\dds_yii\protected\controllers\ContentController.php (13)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/06/05 09:04:50 [error] [exception.CException] exception 'CException' with message '404 error' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+---
+2013/06/05 09:05:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+---
+2013/06/05 09:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+---
+2013/06/05 09:06:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/index.php/content/kapcsola
+---
