@@ -407,3 +407,744 @@ Stack trace:
 #8 {main}
 REQUEST_URI=/dds_yii/content/kapcsola
 ---
+2013/06/05 11:40:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/site/page".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/site/page')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/index.php/admin/site/page?view=about
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/{$i}".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/{$i}')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/%7B$i%7D
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin/images/bck.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/admin/image...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/css/admin/images/bck.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/{$i}".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/{$i}')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/%7B$i%7D
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin/images/_menu_logout.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/admin/image...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/css/admin/images/_menu_logout.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin/images/_menu_settings.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/admin/image...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/css/admin/images/_menu_settings.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:43:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:43:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin/images/_menu_edit_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/admin/image...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/css/admin/images/_menu_edit_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:44:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:45:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_content.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_content.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_home.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_home.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/_menu_dropdown_arrow.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/_menu_dropdown_arrow.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_help.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_help.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_db_backup.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_db_backup.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_site.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_site.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_pswd_chng.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_pswd_chng.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/settings_users.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/settings_users.png
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 11:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:57:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:57:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:59:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:59:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 11:59:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/{$smarty.server.PHP_SELF}".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/{$smarty....')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/%7B$smarty.server.PHP_SELF%7D?mod=kezdolap
+HTTP_REFERER=http://localhost/dds_yii/admin/content
+---
+2013/06/05 12:00:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in D:\wamp\www\dds_yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CController.php(270): CController->missingAction('admin')
+#1 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/admin/cont...')
+#3 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dds_yii/site/admin/content
+---
+2013/06/05 12:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
+2013/06/05 12:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/logo.png".' in D:\wamp\www\dds_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ima...')
+#1 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dds_yii/admin/admin/images/logo.png
+---
