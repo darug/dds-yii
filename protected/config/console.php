@@ -15,13 +15,8 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dds-yii',
-			'emulatePrepare' => true,
-			'username' => 'dds-yii',
-			'password' => 'dds_yii',
-			'charset' => 'utf8',
-		),
+		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
+		'testdb'=>require(dirname(__FILE__) . '/db_test.php'),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
