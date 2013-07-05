@@ -11,15 +11,12 @@ return array(
 
 	// application components
 	'components'=>array(
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
 		// uncomment the following to use a MySQL database
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=dds-yii',
 			'emulatePrepare' => true,
 			'username' => 'dds-yii',
-			'password' => 'dds_yii',
+			'password' => 'dds-yii',
 			'charset' => 'utf8',
 		),
 		'log'=>array(
@@ -29,6 +26,12 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
+				// uncomment the following to show log messages on web pages
+				
+				array(
+					'class'=>'CWebLogRoute',
+				),
+					
 			),
 		),
 	),
