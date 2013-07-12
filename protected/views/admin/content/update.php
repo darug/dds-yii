@@ -14,6 +14,11 @@ $this->menu=array(
 	array('label'=>'View Content', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Content', 'url'=>array('admin')),
 );
+if(!$this->admin){
+	unset($this->menu[0]);
+	unset($this->menu[1]);
+	unset($this->menu[3]);
+}
 ?>
 
 <h1>Update Content <?php echo $model->id; ?></h1>

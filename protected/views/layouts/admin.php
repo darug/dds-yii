@@ -1,4 +1,6 @@
-<?php /* @var $this Controller */ ?>
+<?php /* @var $this Controller */
+$bUrl=Yii::app()->request->baseUrl;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
@@ -7,10 +9,12 @@
 	<meta name="language" content="en" />
 	<link rel="shortcut icon" href="admin/images/logo.png" />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin_main.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin_login2.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin_form.css" media="screen, projection" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_main.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_login2.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_form.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/js/ckeditor/contents.css" media="screen, projection" />
+	<script src="<?php echo $bUrl; ?>/js/ckeditor/ckeditor.js"  > </script>
+	<script src="<?php echo $bUrl; ?>/js/ckeditor/config.js" > </script>
 <?php /*
 <script type="text/javascript">
 {literal}
@@ -87,13 +91,13 @@ $(document).ready(function(){
 
 </head>
 <body>
-{include file="keret_message.php"}
+{include file="keret_message.php"} // kiváltandó!!!
 	<div class="container" id="header">
 		<div id="logo"><img src="" alt="<?php echo CHtml::encode(Yii::app()->name); ?>" /></div>
 		<div id="menu">
 			<ul>
-				<li><a href="{$smarty.server.PHP_SELF}?mod=kezdolap"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/_menu_home.png" /> Kezdőlap</a></li>
-				<li><a href="{$smarty.server.PHP_SELF}?mod=statikus"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
+				<li><a href="<?php echo $bUrl; ?>/home"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlap</a></li>
+				<li><a href="<?php echo $bUrl; ?>/admin/statikus"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
 					<ul class="dropdown">
 						<li><a href="{$smarty.server.PHP_SELF}?mod=statikus">Tartalmi oldalak</a></li>
 						<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li>
@@ -107,15 +111,29 @@ $(document).ready(function(){
 				<a class="settings" href="{$smarty.server.PHP_SELF}?mod=config">Beállítások </a>
 				<a class="logout" href="{$smarty.server.PHP_SELF}?mod=logout" title="Kilépés"></a>
 					<ul class="settings_dropdown">
-						<li><a href="{$smarty.server.PHP_SELF}?mod=jelszocsere"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=admin"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=export_database"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=config"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=help"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/admin/settings_help.png" />Információ, segítségkérés</a></li>
+						<li><a href="<?php echo $bUrl; ?>/user/admin"><img src="<?php echo $bUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás</a></li>
+						<li><a href="<?php echo $bUrl; ?>/user/admin"><img src="<?php echo $bUrl; ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
+						<li><a href="{$smarty.server.PHP_SELF}?mod=export_database"><img src="<?php echo $bUrl; ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
+						<li><a href="{$smarty.server.PHP_SELF}?mod=config"><img src="<?php echo $bUrl; ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
+						<li><a href="{$smarty.server.PHP_SELF}?mod=help"><img src="<?php echo $bUrl; ?>/images/admin/settings_help.png" />Információ, segítségkérés</a></li>
 					</ul>
 			</span>
 		</span>
 	</div>
+	div class="span-5 last">
+	<div id="sidebar">
+	<?php //előző sorral együtt ??-> jelig beszúrva 2013.07.0.6 oDG
+		$this->beginWidget('zii.widgets.CPortlet', array(
+			'title'=>'Operations',
+		));
+		$this->widget('zii.widgets.CMenu', array(
+			'items'=>$this->menu,
+			'htmlOptions'=>array('class'=>'operations'),
+		));
+		$this->endWidget();
+	?>
+	</div><!-- sidebar -->
+</div><!--  ??-->
 	<div class="container" id="header_helper">
 	</div>
 	<div class="container" id="main_content">

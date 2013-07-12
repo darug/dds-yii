@@ -14,6 +14,12 @@ $this->menu=array(
 	array('label'=>'Delete Content', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Content', 'url'=>array('admin')),
 );
+if(!$this->admin){
+	unset($this->menu[0]);
+	unset($this->menu[1]);
+	unset($this->menu[3]);
+	unset($this->menu[4]);
+}
 ?>
 
 <h1>View Content #<?php echo $model->id; ?></h1>

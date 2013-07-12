@@ -7,7 +7,7 @@ class ContentController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
-
+	public $admin=False;
 	/**
 	 * @return array action filters
 	 */
@@ -26,23 +26,29 @@ class ContentController extends Controller
 	 */
 	public function accessRules()
 	{
-		return array(
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority>=80 AND $record->authority<=99){$enable_madmin='@';} else {$enable_madmin='XXX';}
+		Content::model()->temp=$enable_madmin;
+		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}
+		$temp=array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array(''),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+			array('allow', // allow authenticated user to perform 'view' and 'update' actions
+				'actions'=>array('view','update'),
+				'users'=>array($enable_madmin),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('admin','delete','create','index'),
+				'users'=>array($enable_admin),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+		Content::model()->temp=$temp; //hibakereséshez
+		return $temp;
 	}
 
 	/**
@@ -51,9 +57,11 @@ class ContentController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority>=80){
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-		));
+		));} else {throw new CHttpException(404,'Ez az oldal az Ön számára nem elérhető!');}
 	}
 
 	/**

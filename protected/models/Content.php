@@ -20,6 +20,7 @@ class Content extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Content the static model class
 	 */
+	public $temp; 
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -32,8 +33,7 @@ class Content extends CActiveRecord
 	{
 		return 'content';
 	}
-
-	/**
+ 	/**
 	 * @return array validation rules for model attributes.
 	 */
 	public function rules()
@@ -41,9 +41,10 @@ class Content extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, title, descrption', 'required'),
-			array('noindex, is_active, contact_finish', 'numerical', 'integerOnly'=>true),
-			array('name, title, descrption', 'length', 'max'=>255),
+			array('name, title, descrption, contact_finish', 'required'),
+		//	array('content','ckeditor'),
+			array('noindex, is_active', 'numerical', 'integerOnly'=>true),
+			array('name, title, descrption, contact_finish', 'length', 'max'=>255),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

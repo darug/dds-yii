@@ -27,9 +27,11 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		/* @var $this SiteController */
+		$record=Content::model()->findByAttributes(array('name'=>'home'));//a home helyére a megfelelő name írandó
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$this->render('index', array('record' => $record));
 	}
 
 	/**

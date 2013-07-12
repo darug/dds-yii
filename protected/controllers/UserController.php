@@ -36,7 +36,7 @@ class UserController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','index','delete'),
+				'actions'=>array('admin','index','delete', 'create'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -203,4 +203,6 @@ class UserController extends Controller
 	    $salt .= strtr(substr(base64_encode($rand), 0, 22), array('+' => '.'));
 	    return $salt;
 	}
+	
+	
 }
