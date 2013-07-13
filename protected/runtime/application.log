@@ -3981,3 +3981,80 @@ Stack trace:
 #8 {main}
 REQUEST_URI=/dds-yii/content/
 ---
+2013/07/13 20:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in C:\wamp\www\dds-yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 C:\wamp\www\dds-yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 C:\wamp\www\dds-yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\dds-yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\dds-yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 C:\wamp\www\dds-yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\dds-yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds-yii/content/
+---
+2013/07/13 20:37:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\wamp\www\dds-yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\dds-yii\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/admin')
+#3 C:\wamp\www\dds-yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\dds-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dds-yii/content/admin
+---
+2013/07/13 20:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in C:\wamp\www\dds-yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 C:\wamp\www\dds-yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 C:\wamp\www\dds-yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\dds-yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\dds-yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 C:\wamp\www\dds-yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\dds-yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds-yii/admin/
+---
+2013/07/13 20:53:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in C:\wamp\www\dds-yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 C:\wamp\www\dds-yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 C:\wamp\www\dds-yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\dds-yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\dds-yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 C:\wamp\www\dds-yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\dds-yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds-yii/user
+---
+2013/07/13 20:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in C:\wamp\www\dds-yii\protected\controllers\SiteController.php:49
+Stack trace:
+#0 C:\wamp\www\dds-yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#1 C:\wamp\www\dds-yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\dds-yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\dds-yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#6 C:\wamp\www\dds-yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\dds-yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds-yii/site/index
+HTTP_REFERER=http://localhost/dds-yii/user/admin
+---
+2013/07/13 21:01:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in C:\wamp\www\dds-yii\protected\controllers\SiteController.php:49
+Stack trace:
+#0 C:\wamp\www\dds-yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#1 C:\wamp\www\dds-yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\dds-yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\dds-yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 C:\wamp\www\dds-yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#6 C:\wamp\www\dds-yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\dds-yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds-yii/site/index
+HTTP_REFERER=http://localhost/dds-yii/user/create
+---

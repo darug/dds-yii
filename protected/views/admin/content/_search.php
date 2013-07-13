@@ -48,7 +48,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'contact_finish'); ?>
-		<?php echo $form->textField($model,'contact_finish'); ?>
+		<?php echo $form->textField($model,'contact_finish',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row buttons">

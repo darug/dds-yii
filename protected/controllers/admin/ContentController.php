@@ -7,7 +7,15 @@ class ContentController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
-	public $admin=False;
+	public $admin;
+	public $fadmin;
+	public $temp;
+	public $update="Oldal módosítása";
+	public $list="Oldalak listázása";
+	public $view="Oldal tartalom megnézése";
+	public $delete="Oldal törlése";
+	public $manage="Oldalak kezelése";
+	public $create="Új oldal készítése";
 	/**
 	 * @return array action filters
 	 */
@@ -27,20 +35,21 @@ class ContentController extends Controller
 	public function accessRules()
 	{
 		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
-		if($record->authority>=80 AND $record->authority<=99){$enable_madmin='@';} else {$enable_madmin='XXX';}
-		Content::model()->temp=$enable_madmin;
+		if($record->authority<=99){$this->admin=true;}
+		if($record->authority>=80 && $record->authority<99){$this->fadmin=true;}else{$this->temp="A feltétel nem teljesült";}
+		if($record->authority>=80 AND $record->authority<=99){$enable_fadmin='@';} else {$enable_fadmin='XXX';}
 		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}
 		$temp=array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array(''),
+				'actions'=>array('index'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'view' and 'update' actions
-				'actions'=>array('view','update'),
-				'users'=>array($enable_madmin),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('index','view','update','create','admin','delete'),
+				'users'=>array($enable_fadmin),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create','index'),
+				'actions'=>array('admin','delete','create','update','view'),
 				'users'=>array($enable_admin),
 			),
 			array('deny',  // deny all users

@@ -8,6 +8,15 @@ class UserController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
+	public $admin;
+	public $fadmin;
+	public $temp;
+	public $update="Felhasználó módosítása";
+	public $list="Felhasználók listázása";
+	public $view="Felhasználó megnézése";
+	public $delete="Felhasználó törlése";
+	public $manage="Felhasználók kezelése";
+	public $create="Új felhasználó felvétele";
 	/**
 	 * @return array action filters
 	 */
@@ -26,6 +35,11 @@ class UserController extends Controller
 	 */
 	public function accessRules()
 	{
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority<=99){$this->admin=true;}
+		if($record->authority>=80 && $record->authority<99){$this->fadmin=true;}else{$this->temp="A feltétel nem teljesült";}
+		if($record->authority>=80 AND $record->authority<=99){$enable_fadmin='@';} else {$enable_fadmin='XXX';}
+		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}
 		return array(
 		/*	array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
@@ -33,11 +47,11 @@ class UserController extends Controller
 			), */ //13.07.03. oDG
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('view','update'),
-				'users'=>array('@'),
+				'users'=>array($enable_fadmin),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','index','delete', 'create'),
-				'users'=>array('admin'),
+				'users'=>array($enable_admin),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -55,6 +69,7 @@ class UserController extends Controller
 		if($record->id==$id or $record->authority==99){
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'fadmin'=>$fadmin,
 		));} else {throw new CHttpException(404,'A keresett record Ön számára nem elérhető!');}
 	}
 

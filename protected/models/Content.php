@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'content':
  * @property integer $id
+ * @property string $url
  * @property string $name
  * @property string $title
  * @property string $descrption
@@ -12,6 +13,8 @@
  * @property integer $noindex
  * @property integer $is_active
  * @property integer $contact_finish
+ * @property string $temp // atmeneti tarolo
+ * @property boolen $admin //false, ha nem a user->autority <80
  */
 class Content extends CActiveRecord
 {
@@ -21,6 +24,9 @@ class Content extends CActiveRecord
 	 * @return Content the static model class
 	 */
 	public $temp; 
+	public $admin;
+	public $fadmin;
+	
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -44,11 +50,11 @@ class Content extends CActiveRecord
 			array('name, title, descrption, contact_finish', 'required'),
 		//	array('content','ckeditor'),
 			array('noindex, is_active', 'numerical', 'integerOnly'=>true),
-			array('name, title, descrption, contact_finish', 'length', 'max'=>255),
+			array('url, name, title, descrption, contact_finish', 'length', 'max'=>255),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, noindex, is_active, contact_finish', 'safe', 'on'=>'search'),
+			array('id, url, name, noindex, is_active, contact_finish', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -92,6 +98,7 @@ class Content extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('url',$this->url,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('noindex',$this->noindex);
 		$criteria->compare('is_active',$this->is_active);

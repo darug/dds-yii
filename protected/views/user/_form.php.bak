@@ -11,30 +11,28 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">A <span class="required">*</span>-gal jelölt mezők kitöltése kötelező!</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id');?>
-	<?php if(!$this->fadmin){ echo $form->textField($model,'id');} else {echo $model->id;} ?>
+		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
 		<?php echo $form->error($model,'id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php if(!$this->fadmin){echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64));}
-		else {echo $model->username;} ?>
+		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		Jelszó változtatáskor töröld ki a régít és írd be az újat!
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
-   <?php if(!$this->fadmin){ ?>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'salt'); ?>
 		<?php echo $form->textField($model,'salt'); ?>
@@ -52,10 +50,9 @@
 		<?php echo $form->textField($model,'authority'); ?>
 		<?php echo $form->error($model,'authority'); ?>
 	</div>
-<?php } ?>
+
 	<div class="row">
-		<?php echo $form->labelEx($model,'remembering'); 
-		if($this->fadmin){echo " Ide írd a jelszóra emlékeztető szöveget!<br>";}?>
+		<?php echo $form->labelEx($model,'remembering'); ?>
 		<?php echo $form->textField($model,'remembering',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'remembering'); ?>
 	</div>
