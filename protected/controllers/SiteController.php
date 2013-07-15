@@ -5,6 +5,7 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
+
 	public function actions()
 	{
 		return array(
@@ -29,7 +30,24 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		//$this->render('index');
+			//$record=Content::model()->findByAttributes(array('contact_finish'=>'index'));//a home helyére a megfelelő name írandó
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		
+		$url = Yii::app()->getRequest()->getQuery('url');
+		
+		$content = Content::model()->find(array(
+		    'condition'=>'url=:url',
+		    'params'=>array(':url'=>$url)
+		));
+		if($content === NULL){
+			$content = Content::model()->find(array(
+		    'condition'=>'url=:url',
+		    'params'=>array(':url'=>'home')
+		));} 
+		if($content === NULL) throw new CHttpException(404, "A keresett tartalom nem található");
+		$this->render('index', array('record' => $content));
 	}
 
 	/**
@@ -65,7 +83,7 @@ class SiteController extends Controller
 					"Content-type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Köszönjük a megkeresést. Amint lehetséges válaszolunk!');
 				$this->refresh();
 			}
 		}

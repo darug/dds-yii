@@ -7,7 +7,15 @@ class ContentController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
-
+	public $admin;
+	public $fadmin;
+	public $temp;
+	public $update="Oldal módosítása";
+	public $list="Oldalak listázása";
+	public $view="Oldal tartalom megnézése";
+	public $delete="Oldal törlése";
+	public $manage="Oldalak kezelése";
+	public $create="Új oldal készítése";
 	/**
 	 * @return array action filters
 	 */
@@ -26,23 +34,30 @@ class ContentController extends Controller
 	 */
 	public function accessRules()
 	{
-		return array(
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority<=99){$this->admin=true;}
+		if($record->authority>=80 && $record->authority<99){$this->fadmin=true;}else{$this->temp="A feltétel nem teljesült";}
+		if($record->authority>=80 AND $record->authority<=99){$enable_fadmin='@';} else {$enable_fadmin='XXX';}
+		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}
+		$temp=array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'actions'=>array('index','view','update','create','admin','delete'),
+				'users'=>array($enable_fadmin),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('admin','delete','create','update','view'),
+				'users'=>array($enable_admin),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+		Content::model()->temp=$temp; //hibakereséshez
+		return $temp;
 	}
 
 	/**
@@ -51,9 +66,11 @@ class ContentController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority>=80){
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-		));
+		));} else {throw new CHttpException(404,'Ez az oldal az Ön számára nem elérhető!');}
 	}
 
 	/**

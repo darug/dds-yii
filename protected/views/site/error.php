@@ -12,4 +12,8 @@ $this->breadcrumbs=array(
 
 <div class="error">
 <?php echo CHtml::encode($message); ?>
+<br>
+<pre>
+<?php echo print_r(Content::model()->temp)."<br>"; ?>
+</pre>
 </div>

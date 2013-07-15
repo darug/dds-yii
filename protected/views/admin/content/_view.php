@@ -32,7 +32,9 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('is_active')); ?>:</b>
 	<?php echo CHtml::encode($data->is_active); ?>
 	<br />
-
+	<b><?php echo CHtml::encode($data->getAttributeLabel('contact_finish')); ?>:</b>
+	<?php echo CHtml::encode($data->contact_finish); ?>
+	<br />
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('contact_finish')); ?>:</b>
 	<?php echo CHtml::encode($data->contact_finish); ?>

@@ -15,19 +15,38 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
-	public function authenticate()
-	{
-		$users=array(
+	// http://www.yiiframework.com/doc/guide/1.1/en/topics.auth példa beszúrva 13.07.02. oDG
+	private $_id;
+    public function authenticate()
+    {
+        $record=User::model()->findByAttributes(array('username'=>$this->username));
+        if($record===null)
+            $this->errorCode=self::ERROR_USERNAME_INVALID;
+        else if($record->password!==crypt($this->password,$record->password)) //$this->password) crypt nélküli verzio
+            $this->errorCode=self::ERROR_PASSWORD_INVALID;
+        else
+        {
+            $this->_id=$record->id;
+            $this->setState('title', $record->title);
+            $this->errorCode=self::ERROR_NONE;
+        }
+        return !$this->errorCode;
+    }
+ 
+    public function getId()
+    {
+        return $this->_id;
+    }
+/*		array(
 			// username => password
 			'demo'=>'demo',
 			'admin'=>'admin',
-		);
+		); //regi resz 13.07.02. oDG 
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($users[$this->username]!==$this->password)
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
 			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
-	}
+		return !$this->errorCode; */ //egész régi rész kihagyva 13.07.02 oDG
 }

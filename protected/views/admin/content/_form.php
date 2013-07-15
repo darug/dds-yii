@@ -11,10 +11,19 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">A <span class="required">*</span>-gal jelölt mezök kitöltése kötelező!</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+	<div class="row">
+		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->error($model,'id'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'url'); ?>
+		<?php echo $form->textField($model,'url',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'url'); ?>
+	</div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
@@ -33,12 +42,14 @@
 		<?php echo $form->error($model,'descrption'); ?>
 	</div>
 
-	<div class="row">
+	<div class="row" id="Content_content contenteditable="true"">
 		<?php echo $form->labelEx($model,'content'); ?>
 		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
-
+		 <script>
+                CKEDITOR.replace( 'Content[content]' );
+        </script>
 	<div class="row">
 		<?php echo $form->labelEx($model,'noindex'); ?>
 		<?php echo $form->textField($model,'noindex'); ?>
@@ -53,7 +64,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contact_finish'); ?>
-		<?php echo $form->textField($model,'contact_finish'); ?>
+		<?php echo $form->textField($model,'contact_finish',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'contact_finish'); ?>
 	</div>
 
