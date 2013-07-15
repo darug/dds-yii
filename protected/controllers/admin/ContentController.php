@@ -144,7 +144,10 @@ class ContentController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
+	public function actionAthelyezendo()
+	{
+		$this->render('athelyezendo');
+	}
 	/**
 	 * Manages all models.
 	 */

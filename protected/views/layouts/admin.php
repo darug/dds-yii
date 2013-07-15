@@ -99,8 +99,8 @@ $(document).ready(function(){
 				<li><a href="<?php echo $bUrl; ?>/home"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlap</a></li>
 				<li><a href="<?php echo $bUrl; ?>/admin/statikus"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
 					<ul class="dropdown">
-						<li><a href="{$smarty.server.PHP_SELF}?mod=statikus">Tartalmi oldalak</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li>
+						<li><a href="<?php echo $bUrl?>/admin/content/">Tartalmi oldalak</a></li>
+					<!--	<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li> -->
 					</ul>
 				</li>
 			</ul>
@@ -108,20 +108,24 @@ $(document).ready(function(){
 		<span id="right_menu">
 			<span id="logged_name">Bejelentkezve: <?php echo Yii::app()->user->name; ?></span><br class="float_right" />
 			<span id="settings">
-				<a class="settings" href="{$smarty.server.PHP_SELF}?mod=config">Beállítások </a>
-				<a class="logout" href="{$smarty.server.PHP_SELF}?mod=logout" title="Kilépés"></a>
+				<a class="settings" href="">Beállítások </a>
+				<a class="logout" href="<?php echo $bUrl; ?>/site/logout" title="Kilépés"></a>
 					<ul class="settings_dropdown">
-						<li><a href="<?php echo $bUrl; ?>/user/admin"><img src="<?php echo $bUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás</a></li>
-						<li><a href="<?php echo $bUrl; ?>/user/admin"><img src="<?php echo $bUrl; ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=export_database"><img src="<?php echo $bUrl; ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=config"><img src="<?php echo $bUrl; ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
-						<li><a href="{$smarty.server.PHP_SELF}?mod=help"><img src="<?php echo $bUrl; ?>/images/admin/settings_help.png" />Információ, segítségkérés</a></li>
+						<li><a href="<?php echo $bUrl; ?>/admin/user"><img src="<?php echo $bUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás</a></li>
+						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
+						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
+						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
+						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_help.png" />Információ, segítségkérés</a></li>
 					</ul>
 			</span>
 		</span>
 	</div>
 	div class="span-5 last">
-	<div id="sidebar">
+	//almenu innet kiveve
+</div><!--  ??-->
+	<div class="container" id="header_helper">
+	</div>
+		<div id="sidebar">
 	<?php //előző sorral együtt ??-> jelig beszúrva 2013.07.0.6 oDG
 		$this->beginWidget('zii.widgets.CPortlet', array(
 			'title'=>'Operations',
@@ -133,15 +137,17 @@ $(document).ready(function(){
 		$this->endWidget();
 	?>
 	</div><!-- sidebar -->
-</div><!--  ??-->
-	<div class="container" id="header_helper">
-	</div>
+
 	<div class="container" id="main_content">
 		<?php echo $content; ?>
 	</div>
 	<div class="container" id="footer">
-		<span style="float: left;">DD Standard Adminisztrációs Felület v3.0</span>
+		<span style="float:left;">DD Standard Adminisztrációs Felület v3.0 Copyright &copy; <?php echo date('Y'); ?> by DD Standard Kft.
+		 	All Rights Reserved.<br/>
+		</span>
 		<span style="float: right"><a href="http://www.ddstandard.hu" target="_blank">www.ddstandard.hu</a></span>
+		<br><br><br>
+		<p style="center"><?php echo Yii::powered(); ?></p>
 	</div>
 </body>
 </html>

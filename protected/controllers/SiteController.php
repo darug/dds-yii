@@ -26,6 +26,11 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
+	 public function actionAthelyezendo()
+	{
+		$this->render('/site/athelyezendo');
+	}
+	
 	public function actionIndex()
 	{
 		// renders the view file 'protected/views/site/index.php'
@@ -57,6 +62,7 @@ class SiteController extends Controller
 	{
 		if($error=Yii::app()->errorHandler->error)
 		{
+			$error=$error."--SiteController";
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
 			else
