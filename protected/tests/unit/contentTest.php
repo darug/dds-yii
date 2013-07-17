@@ -7,10 +7,8 @@ class MyClassTest extends CTestCase
 		
 		$tableName = 'content';
 		$model = new Content();	
-		$this->assertEquals($tableName, $model->tableName());
-		
+		$this->assertEqual($tableName, $model->tableName());
+
     }
-	
-	
-	
+
 }
