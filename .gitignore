@@ -3,5 +3,5 @@ protected/runtime/
 themes/classic/views/
 protected/runtime/
 protected/config/db_prod.php
-protected/config/db_main.php
+protected/config/db_dev.php
 protected/config/db_test.php
