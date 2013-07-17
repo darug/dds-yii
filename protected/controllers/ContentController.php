@@ -16,7 +16,7 @@ class ContentController extends Controller
 	}
 	
 	public function actionMain(){
-		
+
 		return true;
 		
 	}
