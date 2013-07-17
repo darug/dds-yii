@@ -4311,3 +4311,147 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/dds_yii/admin/user
 ---
+2013/07/16 08:46:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/kezdolap
+---
+2013/07/16 08:47:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/user
+---
+2013/07/16 08:47:34 [error] [php] Trying to get property of non-object (D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php:38)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(291): CFilterChain->run()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#3 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/admin/content
+in D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php (38)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/07/16 08:50:07 [error] [php] Trying to get property of non-object (D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php:38)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(291): CFilterChain->run()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#3 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/admin/content
+in D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php (38)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/07/16 08:50:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\SiteController.php:49
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/07/17 12:39:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\SiteController.php:49
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/
+---
+2013/07/17 12:39:12 [error] [php] Trying to get property of non-object (D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php:38)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(291): CFilterChain->run()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#3 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/admin/content
+in D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php (38)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/07/17 12:41:17 [error] [php] Trying to get property of non-object (D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php:38)
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(291): CFilterChain->run()
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(265): ContentController->runActionWithFilters()
+#3 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): ContentController->run()
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\wamp\www\dds_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/dds_yii/admin/content
+in D:\wamp\www\dds_yii\protected\controllers\admin\ContentController.php (38)
+in D:\wamp\www\dds_yii\index.php (13)
+2013/07/17 12:42:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\ContentController.php:13
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): ContentController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('index')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/index')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/admin/
+---
+2013/07/17 12:52:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'. The SQL statement executed was: INSERT INTO `user` (`name`, `password`, `salt`, `strategy`, `authority`, `remembering`, `title`, `rememberMe`) VALUES (:name, :password, :salt, :strategy, :authority, :remembering, :title, :rememberMe).
+2013/07/17 12:52:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'. The SQL statement executed was: INSERT INTO `user` (`name`, `password`, `salt`, `strategy`, `authority`, `remembering`, `title`, `rememberMe`) VALUES (:name, :password, :salt, :strategy, :authority, :remembering, :title, :rememberMe)' in D:\wamp\www\dds_yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\db\CDbCommand.php(1247): CDbCommand->execute(Array)
+#1 D:\wamp\www\dds_yii\framework\db\CDbMigration.php(173): CDbCommand->insert('user', Array)
+#2 D:\wamp\www\dds_yii\protected\migrations\m130717_124418_insert_first_user_to_user_table.php(17): CDbMigration->insert('user', Array)
+#3 D:\wamp\www\dds_yii\framework\cli\commands\MigrateCommand.php(385): m130717_124418_insert_first_user_to_user_table->up()
+#4 D:\wamp\www\dds_yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130717_124418_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 D:\wamp\www\dds_yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 D:\wamp\www\dds_yii\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 D:\wamp\www\dds_yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 D:\wamp\www\dds_yii\framework\yiic.php(33): CApplication->run()
+#11 D:\wamp\www\dds_yii\protected\yiic.php(7): require_once('D:\wamp\www\dds...')
+#12 {main}
+---
+2013/07/17 12:53:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'A keresett tartalom nem található' in D:\wamp\www\dds_yii\protected\controllers\SiteController.php:49
+Stack trace:
+#0 D:\wamp\www\dds_yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#1 D:\wamp\www\dds_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\wamp\www\dds_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\wamp\www\dds_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(282): CController->run('')
+#5 D:\wamp\www\dds_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#6 D:\wamp\www\dds_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\wamp\www\dds_yii\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/dds_yii/
+HTTP_REFERER=http://localhost/dds_yii/site/login
+---
