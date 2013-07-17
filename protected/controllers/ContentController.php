@@ -14,5 +14,11 @@ class ContentController extends Controller
 		
 		$this->render('index', array('content' => $content));
 	}
+	
+	public function actionMain(){
+		
+		return true;
+		
+	}
 
 }
