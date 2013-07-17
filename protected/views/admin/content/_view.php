@@ -2,44 +2,10 @@
 /* @var $this ContentController */
 /* @var $data Content */
 ?>
-
-<div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
-	<?php echo CHtml::encode($data->name); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
-	<?php echo CHtml::encode($data->title); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('descrption')); ?>:</b>
-	<?php echo CHtml::encode($data->descrption); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
-	<?php echo CHtml::encode($data->content); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('noindex')); ?>:</b>
-	<?php echo CHtml::encode($data->noindex); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('is_active')); ?>:</b>
-	<?php echo CHtml::encode($data->is_active); ?>
-	<br />
-	<b><?php echo CHtml::encode($data->getAttributeLabel('contact_finish')); ?>:</b>
-	<?php echo CHtml::encode($data->contact_finish); ?>
-	<br />
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('contact_finish')); ?>:</b>
-	<?php echo CHtml::encode($data->contact_finish); ?>
-	<br />
-
-	*/ ?>
-
-</div>
+		<tr>
+			<td><?php echo CHtml::encode($data->getAttributeLabel('id')); ?></td>
+			<td><?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->id)); ?></td>
+			<td><?php echo CHtml::encode($data->descrption); ?></td>
+			<td class="ex"><input name="contact_finish" id="contact_finish_<?php echo CHtml::encode($data->name); ?>" <?php if($data->contact_finish == 1){ ?>checked="checked"<?php } ?> type="radio" value="<?php echo CHtml::encode($data->id); ?>" /></td>
+			<td></td>
+		</tr>

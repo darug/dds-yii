@@ -139,9 +139,9 @@ class ContentController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Content');
+		$contents = new CActiveDataProvider('Content');
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'contents' => $contents,
 		));
 	}
 	public function actionAthelyezendo()
