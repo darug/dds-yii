@@ -47,7 +47,7 @@ $bUrl=Yii::app()->request->baseUrl;
 			'links'=>$this->breadcrumbs,
 		)); */?><!-- breadcrumbs -->
 	<?php endif?>
-	<p>
+	<p class="info">
 	<?php
 	$nap=array("","hétfő","kedd","szerda","csütörtök","péntek","szombat","vasárnap" );
 		$nnap=date('N');
