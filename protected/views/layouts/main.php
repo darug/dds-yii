@@ -49,16 +49,17 @@ $bUrl=Yii::app()->request->baseUrl;
 	<?php endif?>
 	<p class="info">
 	<?php
-	$nap=array("","hétfő","kedd","szerda","csütörtök","péntek","szombat","vasárnap" );
+		$nap=array("","hétfő","kedd","szerda","csütörtök","péntek","szombat","vasárnap" );
 		$nnap=date('N');
 		$nhet=date('W')%2;
 		$het=array("páros","páratlan");
+		$honap=array('','január','február','április','május','június','július','augusztus','szeptember','október','november','december');
 		if($nnap%2==1 && $nnap<5){$rendelido=" 8 - 12 óráig van rendelés.";}
 		elseif($nnap%2==0 && $nnap<5){$rendelido=" 16 - 20 óráig van rendelés.";}
 		elseif($nnap==5 && $nhet==0){$rendelido=" 8 - 12 óráig van rendelés.";}
 		elseif($nnap==5 && $nhet==1){$rendelido=" 16 - 20 óráig van rendelés.";}
 		else{$rendelido=" nincs rendelés!";}
-		echo " Ma ".$nap[$nnap]." és ".$het[$nhet]." hét van. Ma $rendelido"
+		echo " Ma ".date('Y')." ".$honap[date('n')]." $nnap. ".$nap[$nnap]." és ".$het[$nhet]." hét van. A mai napon $rendelido"
 	;
 			?>
 	</p>
