@@ -44,7 +44,7 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
-		),
+		),    
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

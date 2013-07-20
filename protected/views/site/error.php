@@ -8,12 +8,12 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h2>Hiba az oldalon --- <?php echo $error; ?></h2>
+<h2>Hiba az oldalon <?php echo $error; ?></h2>
 
 <div class="error">
 <?php echo CHtml::encode($message); ?>
 <br>
 <pre>
-<?php //echo print_r(Content::model()->temp)."<br>"; ?>
+<?php echo print_r(Content::model()->temp)."<br>"; ?>
 </pre>
 </div>
