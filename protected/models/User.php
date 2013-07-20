@@ -11,7 +11,7 @@
  * @property string $lastmod
  * @property integer $rememberMe
  */
-class Admin extends CActiveRecord
+class User extends CActiveRecord
 {
 	public $temp; 
 	public $admin;
@@ -30,7 +30,7 @@ class Admin extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'admin';
+		return 'user';
 	}
 
 	/**
