@@ -39,10 +39,11 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'	=> false,
 			'rules'=>array(
-				'<name:\w+>'=>'content/index',
+				'admin/'=>'admin/admin/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<name:\w+>'=>'content/index',
 			),
 		),    
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
@@ -58,7 +59,7 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				/* 
 				array(
 					'class'=>'CWebLogRoute',
 				),

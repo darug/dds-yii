@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Contents'=>array('index'),
-	'Manage',
+	'Műveletek',
 );
 
 $this->menu=array(
@@ -53,7 +53,7 @@ Ezzal az oldallal kezelheted a statikus oldal tartalmakat.
 		'name',
 		'title',
 		'descrption',
-		'content',
+		'content:html',
 		'noindex',
 		'is_active',
 		'contact_finish',

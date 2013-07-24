@@ -41,14 +41,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, username, password, authority', 'required'),
+			array('id, username,title, password, authority', 'required'),
 			array('id, authority, rememberMe', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
-			array('password, remembering', 'length', 'max'=>255),
+			array('password,title', 'length', 'max'=>255),
 	//		array('lastmod', 'lenght', 'max' => 20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, username, password, authority, lastmod, rememberMe', 'safe', 'on'=>'search'),
+			array('id, username, password, title, authority, lastmod, rememberMe', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,10 +70,11 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Username',
+			'username' => 'Fehasználói név',
 			'password' => 'Password',
-			'authority' => 'Authority',
-			'lastmod' => 'Lastmod',
+			'title' => 'Leírás',
+			'authority' => 'Jogosultság (guest<80, oldal tulajdonos<91,',
+			'lastmod' => 'Utolsó mődosítás ideje',
 			'rememberMe' => 'Remember Me',
 		);
 	}
@@ -92,6 +93,7 @@ class User extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
+		$criteria->compare('title',$this->title,true);
 		$criteria->compare('authority',$this->authority);
 		$criteria->compare('lastmod',$this->lastmod,true);
 		$criteria->compare('rememberMe',$this->rememberMe);

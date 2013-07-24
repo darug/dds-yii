@@ -21,9 +21,24 @@ if(!$this->admin){
 }
 ?>
 
-<h1><?php echo $this->list." #".$model->id; ?></h1>
+<h1><?php echo $this->view." #".$model->id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'uzenet-grid',
+	'dataProvider'=>$model->search(),
+	
+	'columns'=>array(
+		'id',
+		'uzenet:html',
+		'ervenyes',
+		'megjegyzes:html',
+		'valid',
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
+));
+/*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
@@ -32,4 +47,6 @@ if(!$this->admin){
 		'megjegyzes',
 		'valid',
 	),
-)); ?>
+));
+ */
+  ?>

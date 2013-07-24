@@ -16,21 +16,17 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
 	<?php echo CHtml::encode($data->password); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('salt')); ?>:</b>
-	<?php echo CHtml::encode($data->salt); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('srtategy')); ?>:</b>
-	<?php echo CHtml::encode($data->srtategy); ?>
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
+	<?php echo CHtml::encode($data->title); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('authority')); ?>:</b>
 	<?php echo CHtml::encode($data->authority); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('remembering')); ?>:</b>
-	<?php echo CHtml::encode($data->remembering); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('rememberMe')); ?>:</b>
+	<?php echo CHtml::encode($data->rememberMe); ?>
 	<br />
 
 	<?php /*

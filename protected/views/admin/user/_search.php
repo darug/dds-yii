@@ -20,15 +20,10 @@
 		<?php echo $form->label($model,'username'); ?>
 		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64)); ?>
 	</div>
-
+	
 	<div class="row">
-		<?php echo $form->label($model,'salt'); ?>
-		<?php echo $form->textField($model,'salt'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'srtategy'); ?>
-		<?php echo $form->textField($model,'srtategy'); ?>
+		<?php echo $form->label($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>64)); ?>
 	</div>
 
 	<div class="row">
@@ -37,18 +32,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'remembering'); ?>
-		<?php echo $form->textField($model,'remembering',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'lastmod'); ?>
 		<?php echo $form->textField($model,'lastmod'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'title'); ?>
-		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>60)); ?>
 	</div>
 
 	<div class="row">
@@ -57,7 +42,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Keresés'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

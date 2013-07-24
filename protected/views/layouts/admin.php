@@ -100,6 +100,7 @@ $(document).ready(function(){
 				<li><a href="<?php echo $bUrl; ?>/admin/statikus"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
 					<ul class="dropdown">
 						<li><a href="<?php echo $bUrl?>/admin/content/">Tartalmi oldalak</a></li>
+						<li><a href="<?php echo $bUrl?>/admin/uzenet/">Üzenetek</a></li>
 					<!--	<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li> -->
 					</ul>
 				</li>
@@ -128,7 +129,7 @@ $(document).ready(function(){
 		<div id="sidebar">
 	<?php //előző sorral együtt ??-> jelig beszúrva 2013.07.0.6 oDG
 		$this->beginWidget('zii.widgets.CPortlet', array(
-			'title'=>'Operations',
+			'title'=>'Műveletek',
 		));
 		$this->widget('zii.widgets.CMenu', array(
 			'items'=>$this->menu,

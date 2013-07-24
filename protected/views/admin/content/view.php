@@ -22,9 +22,9 @@ if(!$this->admin){
 }
 ?>
 
-<h1><?php echo $this->list." #".$model->id; ?></h1>
+<h1><?php echo $this->view." #".$model->id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<!-- <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
@@ -36,4 +36,23 @@ if(!$this->admin){
 		'is_active',
 		'contact_finish',
 	),
+)); ?> -->
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'content-grid',
+	'dataProvider'=>$model->search(),
+	
+	'columns'=>array(
+		'id',
+		'name',
+		'title',
+		'descrption',
+		'content:html',
+		'noindex',
+		
+		'contact_finish',
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
 )); ?>
+

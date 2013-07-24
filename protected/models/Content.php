@@ -50,7 +50,7 @@ class Content extends CActiveRecord
 			array('name, title, descrption, contact_finish', 'required'),
 		//	array('content','ckeditor'),
 			array('noindex, is_active', 'numerical', 'integerOnly'=>true),
-			array('url, name, title, descrption, contact_finish', 'length', 'max'=>255),
+			array('name, title, descrption, contact_finish', 'length', 'max'=>255),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -98,7 +98,6 @@ class Content extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('url',$this->url,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('noindex',$this->noindex);
 		$criteria->compare('is_active',$this->is_active);

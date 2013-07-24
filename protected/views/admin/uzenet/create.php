@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Uzenet', 'url'=>array('index')),
-	array('label'=>'Manage Uzenet', 'url'=>array('admin')),
+	array('label'=>$this->list, 'url'=>array('index')),
+	array('label'=>$this->manage, 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Uzenet</h1>
+<h1><?php echo $this->create ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

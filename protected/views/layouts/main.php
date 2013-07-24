@@ -37,7 +37,8 @@ $bUrl=Yii::app()->request->baseUrl;
 				array('label'=>'Kezdőoldal', 'url'=>array('/home')),
 				array('label'=>'Rendelési idő', 'url'=>array('/rendel')),
 				array('label'=>'Elérhetőség/üzenet küldés', 'url'=>array('/site/contact')),
-				array('label'=>'Bejelntkezés', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Adminisztációs oldalak', 'url'=>array('/admin/'), 'visible'=>(Yii::app()->user->name=='admin')),
+				array('label'=>'Bejelentkezés', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Kijelentkezés ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

@@ -12,9 +12,26 @@ $this->menu=array(
 );
 ?>
 
-<h1>Uzenetek</h1>
+<h1>Üzenetek</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php 
+$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'uzenet-grid',
+	'dataProvider'=>$dataProvider,
+	
+	'columns'=>array(
+		'id',
+		'uzenet:html',
+		'ervenyes',
+		'megjegyzes:html',
+		'valid',
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
+));
+/* $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
-)); ?>
+));*/
+ ?>

@@ -19,11 +19,7 @@
 		<?php echo $form->textField($model,'id'); ?>
 		<?php echo $form->error($model,'id'); ?>
 	</div>
-	<div class="row">
-		<?php echo $form->labelEx($model,'url'); ?>
-		<?php echo $form->textField($model,'url',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'url'); ?>
-	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
@@ -69,7 +65,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Mentés'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
