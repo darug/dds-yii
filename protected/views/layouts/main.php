@@ -32,12 +32,13 @@ $bUrl=Yii::app()->request->baseUrl;
 	</div> -- header -->
 
 	<div id="mainmenu">
+
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Kezdőoldal', 'url'=>array('/home')),
 				array('label'=>'Rendelési idő', 'url'=>array('/rendel')),
 				array('label'=>'Elérhetőség/üzenet küldés', 'url'=>array('/site/contact')),
-				array('label'=>'Adminisztációs oldalak', 'url'=>array('/admin/'), 'visible'=>(Yii::app()->user->name=='admin')),
+				array('label'=>'Adminisztációs oldalak', 'url'=>array('/admin/'), 'visible'=>strpos(Yii::app()->user->name,'dmin')),//(Yii::app()->user->name=='admin')),
 				array('label'=>'Bejelentkezés', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Kijelentkezés ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

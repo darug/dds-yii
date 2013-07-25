@@ -96,7 +96,12 @@ $(document).ready(function(){
 		<div id="logo"><img src="" alt="<?php echo CHtml::encode(Yii::app()->name); ?>" /></div>
 		<div id="menu">
 			<ul>
-				<li><a href="<?php echo $bUrl; ?>/home"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlap</a></li>
+				<li><a href="<?php echo $bUrl; ?>/home"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlapok</a>
+					<ul class="dropdown">
+						<li><a href="<?php echo $bUrl?>/home">Honlap</a></li>
+						<li><a href="<?php echo $bUrl?>/admin">Admin felület</a></li>
+					<!--	<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li> -->
+					</ul></li>
 				<li><a href="<?php echo $bUrl; ?>/admin/statikus"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
 					<ul class="dropdown">
 						<li><a href="<?php echo $bUrl?>/admin/content/">Tartalmi oldalak</a></li>
@@ -112,7 +117,7 @@ $(document).ready(function(){
 				<a class="settings" href="">Beállítások </a>
 				<a class="logout" href="<?php echo $bUrl; ?>/site/logout" title="Kilépés"></a>
 					<ul class="settings_dropdown">
-						<li><a href="<?php echo $bUrl; ?>/admin/user"><img src="<?php echo $bUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás</a></li>
+						<li><a href="<?php echo $bUrl; ?>/admin/user/update/id/<?php echo Yii::app()->user->id?>"><img src="<?php echo $bUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás </a></li>
 						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
 						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
 						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
