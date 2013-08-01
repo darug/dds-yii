@@ -35,6 +35,7 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
+		//* gii futtatasahoz kommentbe rakni 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'	=> false,
@@ -45,7 +46,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 				'<name:\w+>'=>'content/index',
 			),
-		),    
+		),  // */ 
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

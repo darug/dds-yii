@@ -45,7 +45,7 @@ class RendelesiIdo
 	}
 	
 	public function initHonap(){
-		$this->honap = array('','január','február','április','május','június','július','augusztus','szeptember','október','november','december');
+		$this->honap = array('','január','február','március','április','május','június','július','augusztus','szeptember','október','november','december');
 	}
 	
 	public function initOra(){
@@ -55,39 +55,57 @@ class RendelesiIdo
 	
 	public function info(){
 			if($this->nnap%2==1 && $this->nnap<5){
-				$rendelido=" 8 - 12 óráig van rendelés.";
+				$rendelido=" 8 - 12 óráig ";$riveg="van rendelés.";
 				$kezd=8;$veg=12;}
 		 	elseif($this->nnap%2==0 && $this->nnap<5){
-		 		$rendelido=" 16 - 20 óráig van rendelés.";
+		 		$rendelido=" 16 - 20 óráig ";$riveg="van rendelés.";
 		 		$kezd=16;$veg=20;}
 		  	elseif($this->nnap==5 && $this->nhet==0){
-		  		$rendelido=" 8 - 12 óráig van rendelés.";
+		  		$rendelido=" 8 - 12 óráig ";$riveg="van rendelés.";
 		  		$kezd=8;$veg=12;}
 			elseif($this->nnap==5 && $this->nhet==1){
-		   		$rendelido=" 16 - 20 óráig van rendelés.";
+		   		$rendelido=" 16 - 20 óráig "; $riveg="van rendelés.";
 		   		$kezd=16;$veg=20;}
 			else{
-				$rendelido=" nincs rendelés!";
+				$rendelido=" nincs rendelés!";$riveg="";
 				$kezd=0;$veg=0;}
-			$info= " Ma ".date('Y')." ".$this->honap[date('n')]." ".$this->nnap." ".$this->nap[$this->nnap]." és ".$this->het[$this->nhet]." hét van. A mai napon $rendelido ";
+			if($this->ora<$veg){$mai="A mai napon $rendelido $riveg";} else {$mai="";}
+			$info= " Ma ".date('Y')." ".$this->honap[date('n')]." ".date('j')." ".$this->nap[$this->nnap]." és ".$this->het[$this->nhet]." hét van. $mai ";
 		//legközelbbi rendelés ideje
 		$ido=date('i');
-		if($ido==0){
-			$perckezd=0;
-			$atvitel=0;} 
-		else {
-			$perckezd=60-$ido; 
-			$atvitel=1;} 
+			if($ido==0){
+				$perckezd=0;
+				$atvitel=0;} 
+			else {
+				$perckezd=60-$ido; 
+				$atvitel=1;} 
    		if($this->ora<$kezd){
    			$orakezd=$kezd-$this->ora-$atvitel;
-		 	$info.= "A mai rendelés $orakezd óra $perckezd pecr múlva kezdődok!";}
+		 	$info.= "A mai rendelés $orakezd óra $perckezd perc múlva kezdődik!";}
 		elseif($this->ora<$veg){
 			$orakezd=$veg-$this->ora-$atvitel;
 		    $info.= "A rendelés már elkezdődött, $orakezd óra $perckezd perc múlva lesz vége!";}
 		elseif($kezd==0){$info.="A legközelebbi rendelés ideje hétfőn 8-tól 12 óráig lesz!";}
-		else {$info.="Ma már nincs rendelés!";} 
-		return $info;
+		else {
+			$info.="Ma már nincs rendelés! Legközelebb holnap ".$this->rendido($this->nnap+1)." lesz rendelés!";} 
+			return $info;
 	} //function info()
-	
-}
-
+	public function rendido($n){
+			if($n %2 == 1 && $n<5){
+				$rendelido=" 8 - 12 óráig ";$riveg="van rendelés.";
+			}
+		 	elseif($n %2 == 0 && $n<5){
+		 		$rendelido=" 16 - 20 óráig ";$riveg="van rendelés.";
+			}
+		  	elseif($n == 5 && $this->nhet==0){
+		  		$rendelido=" 8 - 12 óráig ";$riveg="van rendelés.";
+			}
+			elseif($n ==5 && $this->nhet==1){
+		   		$rendelido=" 16 - 20 óráig "; $riveg="van rendelés.";
+			}
+			else{
+				$rendelido=" nincs rendelés!";$riveg="";
+			}
+			return $rendelido;
+		}
+		}
