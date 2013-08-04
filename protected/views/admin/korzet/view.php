@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Korzet', 'url'=>array('index')),
-	array('label'=>'Create Korzet', 'url'=>array('create')),
-	array('label'=>'Update Korzet', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Korzet', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Korzet', 'url'=>array('admin')),
+	array('label'=>$this->list, 'url'=>array('index')),
+	array('label'=>$this->create, 'url'=>array('create')),
+	array('label'=>$this->update, 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>$this->delete, 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 );
 ?>
 
@@ -25,11 +24,12 @@ $this->menu=array(
 		'name',
 		'title',
 		'irszam',
+		'utca',
 		'megjegyzes',
 		'kezdo_szam_paros',
 		'veg_szam_paros',
 		'kezdo_szam_paratlan',
 		'veg_szam_paratlan',
-		'utca',
+		
 	),
 )); ?>

@@ -28,15 +28,15 @@ class KorzetController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array(''),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array(''),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -49,81 +49,14 @@ class KorzetController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
-	}
-
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new Korzet;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Korzet']))
-		{
-			$model->attributes=$_POST['Korzet'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Korzet']))
-		{
-			$model->attributes=$_POST['Korzet'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
-
+	
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
 		//$dataProvider=new CActiveDataProvider('Korzet');
-		$model=new Korzet('search');
+		$model=new Korzet();
 		$model->unsetAttributes();  // clear any default values
 		unset($uzenet);
 		/** Ha csak egy rekord van és páros és páratlan kezdőszám üres, akkor $uzenet="ez a az utca teljes egészében a körzetemhez tartozik!",
@@ -133,16 +66,34 @@ class KorzetController extends Controller
 		 * Ha a rekord szám nulla, akkor "Ez az utca nem tartozik a körzetemhez!"
 		 * Jelenleg a lenti feltételek nem működnek, hogy miért az még nyomozásra vár
 		 **/
-		if(isset($_GET['Korzet'])){
-			$model->attributes=$_GET['Korzet'];
-		if(count($model->utca)==1){$uzenet="Ez az utca ";}
-		elseif($model->kezdo_szam_paros=="" && $model->kezdo_szam_paratlan==""){$uzenet.="teljes egészében a körzetemhez tartozik!";}
+	if(isset($_POST['Korzet'])){
+		
+			$model->attributes=$_POST['Korzet'];
+		//	$record=$model->search();
+		//	$record=$model->find('utca=:utca', array(':utca'=>$_POST['Korzet']['utca']));		
+		if($record=$model->find('utca=:utca', array(':utca'=>$_POST['Korzet']['utca']))){
+			$uzenet="kezdes";
+			$color="green";
+			if($record->kezdo_szam_paros>0 && $record->kezdo_szam_paratlan>0){
+				$uzenet="Ez az utca a ".$record->kezdo_szam_paratlan.".-tól ".$record->veg_szam_paratlan.".-ig és a "
+				.$record->kezdo_szam_paros.".-tól ".$record->veg_szam_paros.".-ig a körzetemhez tartozik!";
+				}
+			if($record->kezdo_szam_paros=="" && $record->kezdo_szam_paratlan>="1"){
+				$uzenet="Ez az utca a ".$record->kezdo_szam_paratlan."-tól ".$record->veg_szam_paratlan."-ig a körzetemhez tartozik!";}
+			if($record->kezdo_szam_paros>="2" && $record->kezdo_szam_paratlan==""){
+				$uzenet="Ez az utca a ".$record->kezdo_szam_paros."-tól ".$record->veg_szam_paros."-ig a körzetemhez tartozik!";}
+			if($record->kezdo_szam_paros=="" && $record->kezdo_szam_paratlan==""){$uzenet="Ez az utca teljes egészében a körzetemhez tartozik!";}
+			
+			
+			
 		}
-		elseif($model->kezdo_szam_paros>=2 or $model->kezdo_szam_paratlan>=1){$uzenet.=$model->kezdo_szam_paros."-tól....";} //szamhatarokat beszurni
-		else{$uzenet="Ez az utca NEM TARTOZIK a körzetemhez!";}
+		else{$uzenet="Ez az utca NEM TARTOZIK a körzetemhez!";$color="red";} 
+	 }	
 		$this->render('index',array(
 			'model'=>$model,
 			'uzenet'=>$uzenet,
+			'record'=>$record,
+			'color' =>$color,
 		));
 	}
 
@@ -172,7 +123,7 @@ class KorzetController extends Controller
 	{
 		$model=Korzet::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'A keresett tartalom nem található.');
 		return $model;
 	}
 

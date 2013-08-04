@@ -34,6 +34,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'utca'); ?>
+		<?php echo $form->textField($model,'utca',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'utca'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'megjegyzes'); ?>
 		<?php echo $form->textField($model,'megjegyzes',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'megjegyzes'); ?>
@@ -63,14 +69,9 @@
 		<?php echo $form->error($model,'veg_szam_paratlan'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'utca'); ?>
-		<?php echo $form->textField($model,'utca',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'utca'); ?>
-	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Mentés' : 'Felülírás!!!'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -21,6 +21,9 @@
 	<?php echo CHtml::encode($data->irszam); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('utca')); ?>:</b>
+	<?php echo CHtml::encode($data->utca); ?>
+	<br />
 	<b><?php echo CHtml::encode($data->getAttributeLabel('megjegyzes')); ?>:</b>
 	<?php echo CHtml::encode($data->megjegyzes); ?>
 	<br />
@@ -42,9 +45,7 @@
 	<?php echo CHtml::encode($data->veg_szam_paratlan); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('utca')); ?>:</b>
-	<?php echo CHtml::encode($data->utca); ?>
-	<br />
+	
 
 
 </div>

@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Korzet', 'url'=>array('index')),
-	array('label'=>'Manage Korzet', 'url'=>array('admin')),
+	array('label'=>$this->list, 'url'=>array('index')),
 );
 ?>
 
-<h1>Create Korzet</h1>
+<h1>Új körzetrész felvitele</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

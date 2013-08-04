@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Korzet', 'url'=>array('index')),
-	array('label'=>'Create Korzet', 'url'=>array('create')),
+	array('label'=>$this->list, 'url'=>array('index')),
+	array('label'=>$this->create, 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Korzets</h1>
+<h1>Körzetek kezelése</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

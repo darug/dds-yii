@@ -2,7 +2,10 @@
 
 /**
  * This is the model class for table "korzet".
- *
+ * @brief  Utca nevjegyzek alapjan kiirja, hogy a beirt utca az orvose-e?
+ *  @author oDG
+ *  @date 2013.08.04.
+ * 
  * The followings are the available columns in table 'korzet':
  * @property integer $id
  * @property string $name
@@ -17,7 +20,12 @@
  */
 class Korzet extends CActiveRecord
 {
-	/**
+	public $temp; 
+	public $admin;
+	public $fadmin;
+	
+	 
+	 /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Korzet the static model class
@@ -72,13 +80,13 @@ class Korzet extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'title' => 'Title',
-			'irszam' => 'Irszam',
-			'megjegyzes' => 'Megjegyzes',
-			'kezdo_szam_paros' => 'Kezdo Szam Paros',
-			'veg_szam_paros' => 'Veg Szam Paros',
-			'kezdo_szam_paratlan' => 'Kezdo Szam Paratlan',
-			'veg_szam_paratlan' => 'Veg Szam Paratlan',
+			'irszam' => 'Irányítószám',
 			'utca' => 'Utca',
+			'megjegyzes' => 'Megjegyzes',
+			'kezdo_szam_paros' => 'Kezdő Szám Páros',
+			'veg_szam_paros' => 'Vég Szám Páros',
+			'kezdo_szam_paratlan' => 'Kezdő Szám Páratlan',
+			'veg_szam_paratlan' => 'Vég Szám Páratlan',
 		);
 	}
 
@@ -97,12 +105,12 @@ class Korzet extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('irszam',$this->irszam);
+		$criteria->compare('utca',$this->utca,true);
 		$criteria->compare('megjegyzes',$this->megjegyzes,true);
 		$criteria->compare('kezdo_szam_paros',$this->kezdo_szam_paros,true);
 		$criteria->compare('veg_szam_paros',$this->veg_szam_paros,true);
 		$criteria->compare('kezdo_szam_paratlan',$this->kezdo_szam_paratlan,true);
 		$criteria->compare('veg_szam_paratlan',$this->veg_szam_paratlan,true);
-		$criteria->compare('utca',$this->utca,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
