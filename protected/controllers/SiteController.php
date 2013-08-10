@@ -33,26 +33,7 @@ class SiteController extends Controller
 	
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		//$this->render('index');
-			//$record=Content::model()->findByAttributes(array('contact_finish'=>'index'));//a home helyére a megfelelő name írandó
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
 		
-		/*$url = Yii::app()->getRequest()->getQuery('url');
-		
-		$content = Content::model()->find(array(
-		    'condition'=>'url=:url',
-		    'params'=>array(':url'=>$url)
-		));
-		if($content === NULL){
-			$content = Content::model()->find(array(
-		    'condition'=>'url=:url',
-		    'params'=>array(':url'=>'home')
-		));} 
-		if($content === NULL) throw new CHttpException(404, "A keresett tartalom nem található");
-		$this->render('index', array('record' => $content));*/
 		$this->render('index');
 	}
 
@@ -63,7 +44,7 @@ class SiteController extends Controller
 	{
 		if($error=Yii::app()->errorHandler->error)
 		{
-			$error=$error."--SiteController";
+			
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
 			else

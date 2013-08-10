@@ -109,10 +109,16 @@ class Uzenet extends CActiveRecord
 	}
 	public function info()
  	{
-		$record = $this->find(array(
+		if($record = $this->find(array(
 		    'condition'=>'ervenyes>:ervenyes',
-		    'params'=>array(':ervenyes'=>$this->datum)));
-		$info=$record->uzenet;
-		return $info;
+		    'params'=>array(':ervenyes'=>$this->datum)))){
+			$info=$record->uzenet;
+			return $info;
+		}
+		else{
+			
+			return false;
+			
+		}
 	} 
 }

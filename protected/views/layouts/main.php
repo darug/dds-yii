@@ -56,12 +56,16 @@ $bUrl=Yii::app()->request->baseUrl;
 		echo $rendido->info();
 	?>
 	</p>
-	<p class="uzenet">
 	<?php // aktualis idofuggo informaciok kiirasa
 		$uzenet = new Uzenet();
-		echo $uzenet->info();
+		if($uzenet->info()){
+		?><p class="uzenet"><?php
+		
+			echo $uzenet->info();
+		
+		?></p><?php
+		}
 	?>
-	</p>
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
