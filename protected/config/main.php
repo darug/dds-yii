@@ -41,6 +41,7 @@ return array(
 			'showScriptName'	=> false,
 			'rules'=>array(
 				''											=>	'content/home',
+				'admin/content/delete/id/<id:\d+>'			=>	'admin/content/delete',
 				'admin/'									=>	'admin/admin/index',
 				'<controller:\w+>/<id:\d+>'					=>	'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'	=>	'<controller>/<action>',

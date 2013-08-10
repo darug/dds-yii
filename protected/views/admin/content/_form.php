@@ -65,7 +65,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Mentés'); ?>
+		<?php echo $this->renderPartial('../_submit'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -30,7 +30,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 	),
 ));
-/* $this->widget('zii.widgets.CListView', array(
+/*$this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 ));*/

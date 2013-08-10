@@ -10,6 +10,12 @@ class ContentController extends Controller
 	public $admin;
 	public $fadmin;
 	public $temp;
+	
+	public $module_info = array(
+		'name'				=>	'content',
+		'title'				=>	'Tartalmak',
+		'new'				=>	'tartalom'
+	);
 	public $update="Oldal módosítása";
 	public $list="Oldalak listázása";
 	public $view="Oldal tartalom megnézése";
@@ -90,7 +96,7 @@ class ContentController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
+		
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -114,7 +120,9 @@ class ContentController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
+		
+		$this->module_info['item'] = $model->title;
+	
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -127,11 +135,13 @@ class ContentController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			//$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect($this->createAbsoluteUrl($this->uniqueid));
 	}
 
 	/**
