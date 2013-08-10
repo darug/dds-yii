@@ -40,11 +40,12 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'	=> false,
 			'rules'=>array(
-				'admin/'=>'admin/admin/index',
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-				'<name:\w+>'=>'content/index',
+				''											=>	'content/home',
+				'admin/'									=>	'admin/admin/index',
+				'<controller:\w+>/<id:\d+>'					=>	'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'	=>	'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'				=>	'<controller>/<action>',
+				'<name:\w+>'								=>	'content/index',
 			),
 		),  // */ 
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
