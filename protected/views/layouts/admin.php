@@ -15,80 +15,6 @@ $bUrl=Yii::app()->request->baseUrl;
 	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/js/ckeditor/contents.css" media="screen, projection" />
 	<script src="<?php echo $bUrl; ?>/js/ckeditor/ckeditor.js"  > </script>
 	<script src="<?php echo $bUrl; ?>/js/ckeditor/config.js" > </script>
-<?php /*
-<script type="text/javascript">
-{literal}
-$(document).ready(function(){
-
-	function keep_alive(){
-			$.ajax({
-				  url: 'admin.php',
-				  data: 'mod=keep_alive&ajax=true',
-				  type: "POST",
-				  context: document.body,
-				  success: function(data){
-					if(data != '1'){
-						alert('A kapcsolat megszakadt! További munka folytatása előtt kérem jelentkezzen be újra! Ha nem akarja, hogy a még nem mentett adatok elvesszenek, jelentkezzen be új böngészőablakban, majd mentse a munkát.');
-					}
-				  }
-			});
-	}
-	intervalID=setInterval(keep_alive,300000);
-
-	$("#message").hide().fadeIn();
-	$('.message_sima, .message_siker, .message_hiba').click(function(){ $(this).fadeOut(); });
-	setTimeout(function(){ $("#message").fadeOut(); }, 8000);
-
-	$('table#lista tr').live('click', function(){
-		var url=$(this).find('a').attr('href');
-		window.location.href = url;
-	});
-	$('table#lista tr td.ex').live('click', function(event){
-		event.stopPropagation();
-	});
-
-{/literal}
-{if $config.animacio == "on"}
-{literal}
-
-	$('#header ul li a').live('click', function(event){
-		event.preventDefault();
-		
-		$('#main_content').slideUp(200);
-		$('#footer').delay(200).slideUp(200);
-		$('div:last').after('<div class="container" id="ajax_loader"><img src="admin/images/ajax_loader.gif" /></div>');
-		
-		var current_url = $(this).attr('href');
-		var url_array=current_url.split('?');
-
-		$('#ajax_loader').ready(function(){
-			
-			$.ajax({
-				  url: 'admin.php',
-				  data: url_array[1]+'&ajax=true',
-				  type: "POST",
-				  context: document.body,
-				  success: function(data){
-					$('#main_content').delay(400).html(data).slideDown(400);
-					$('#footer').delay(800).slideDown(200);
-					$('#ajax_loader').delay(1000).fadeOut(300).delay(1300).remove();
-					window.location.href=current_url;
-				  }
-			});
-
-		});
-
-	});
-
-{/literal}
-{/if}
-{literal}
-	
-});
-{/literal}
-</script>
- * */ ?>
-
 </head>
 <body>
 {include file="keret_message.php"} // kiváltandó!!!
@@ -96,17 +22,10 @@ $(document).ready(function(){
 		<div id="logo"><img src="" alt="<?php echo CHtml::encode(Yii::app()->name); ?>" /></div>
 		<div id="menu">
 			<ul>
-				<li><a href="<?php echo $bUrl; ?>/home"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlapok</a>
+				<li><a href="<?php echo $bUrl; ?>/admin"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlap</a></li>
+				<li><a href="<?php echo $bUrl; ?>/admin/content"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
 					<ul class="dropdown">
-						<li><a href="<?php echo $bUrl?>/home">Honlap</a></li>
-						<li><a href="<?php echo $bUrl?>/admin">Admin felület</a></li>
-					<!--	<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li> -->
-					</ul></li>
-				<li><a href="<?php echo $bUrl; ?>/admin/statikus"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Modulok <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
-					<ul class="dropdown">
-						<li><a href="<?php echo $bUrl?>/admin/content/">Tartalmi oldalak</a></li>
-						<li><a href="<?php echo $bUrl?>/admin/uzenet/">Üzenetek</a></li>
-					<!--	<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li> -->
+						<?php echo $this->renderPartial('../_modules'); ?>
 					</ul>
 				</li>
 			</ul>
@@ -117,11 +36,7 @@ $(document).ready(function(){
 				<a class="settings" href="">Beállítások </a>
 				<a class="logout" href="<?php echo $bUrl; ?>/site/logout" title="Kilépés"></a>
 					<ul class="settings_dropdown">
-						<li><a href="<?php echo $bUrl; ?>/admin/user/update/id/<?php echo Yii::app()->user->id?>"><img src="<?php echo $bUrl; ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás </a></li>
-						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
-						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
-						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
-						<li><a href="<?php echo $bUrl; ?>/site/athelyezendo"><img src="<?php echo $bUrl; ?>/images/admin/settings_help.png" />Információ, segítségkérés</a></li>
+						<?php echo $this->renderPartial('../_settings'); ?>
 					</ul>
 			</span>
 		</span>

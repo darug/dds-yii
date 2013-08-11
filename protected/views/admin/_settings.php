@@ -1,0 +1,5 @@
+<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/admin/user/update/id/<?php echo Yii::app()->user->id?>"><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/settings_pswd_chng.png" />Jelszóváltoztatás </a></li>
+<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/site/athelyezendo"><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/settings_users.png" />Adminisztrátorok kezelése</a></li>
+<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/site/athelyezendo"><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/settings_db_backup.png" />Adatbázis mentés</a></li>
+<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/site/athelyezendo"><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/settings_site.png" />Oldal beállításai</a></li>
+<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/site/athelyezendo"><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/settings_help.png" />Információ, segítségkérés</a></li>
