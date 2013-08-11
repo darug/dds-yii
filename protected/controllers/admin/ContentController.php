@@ -94,7 +94,7 @@ class ContentController extends Controller
 		{
 			$model->attributes=$_POST['Content'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
 		}
 		
 		$this->render('create',array(
@@ -118,7 +118,7 @@ class ContentController extends Controller
 		{
 			$model->attributes=$_POST['Content'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
 		
 		$this->module_info['item'] = $model->title;

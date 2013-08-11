@@ -9,6 +9,12 @@ class UzenetController extends Controller
 	//public $layout='//layouts/column2';
 	public $layout='//layouts/admin';
 
+	public $module_info = array(
+		'name'				=>	'uzenet',
+		'title'				=>	'Üzenetek',
+		'new'				=>	'üzenet'
+	);
+
 	public $admin;
 	public $fadmin;
 	public $temp;
@@ -81,7 +87,7 @@ class UzenetController extends Controller
 		{
 			$model->attributes=$_POST['Uzenet'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
 		}
 
 		$this->render('create',array(
@@ -105,8 +111,10 @@ class UzenetController extends Controller
 		{
 			$model->attributes=$_POST['Uzenet'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
+
+		$this->module_info['item'] = $model->id;
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -124,7 +132,7 @@ class UzenetController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(array('index'));
 	}
 
 	/**

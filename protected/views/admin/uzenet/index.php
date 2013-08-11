@@ -5,33 +5,20 @@
 $this->breadcrumbs=array(
 	'Uzenets',
 );
-
-$this->menu=array(
-	array('label'=>$this->create, 'url'=>array('create')),
-	array('label'=>$this->manage, 'url'=>array('admin')),
-);
 ?>
 
-<h1>Üzenetek</h1>
-
-<?php 
-$this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'uzenet-grid',
-	'dataProvider'=>$dataProvider,
-	
-	'columns'=>array(
-		'id',
-		'uzenet:html',
-		'ervenyes',
-		'megjegyzes:html',
-		'valid',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-));
-/*$this->widget('zii.widgets.CListView', array(
+<?php echo $this->renderPartial('../_title'); ?>
+<div class="container">
+		<table id="lista" >
+		<tr>
+			<th width="4%">ID</th>
+			<th width="40%">Üzenet</th>
+			<th width="29%">Megjegyzés</th>
+			<th width="15%">Érvényesség</th>
+			<th width="12%">Műveletek</th>
+		</tr>
+<?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
-));*/
- ?>
+)); ?>
+</table>
