@@ -33,6 +33,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'loginUrl'=>array('admin/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		//* gii futtatasahoz kommentbe rakni 
@@ -43,6 +44,8 @@ return array(
 				''											=>	'content/home',
 				'admin/content/delete/id/<id:\d+>'			=>	'admin/content/delete',
 				'admin/'									=>	'admin/admin/index',
+				'admin/login'								=>	'admin/authentication/login',
+				'admin/logout'								=>	'admin/authentication/logout',
 				'<controller:\w+>/<id:\d+>'					=>	'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'	=>	'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'				=>	'<controller>/<action>',

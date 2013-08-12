@@ -7,17 +7,17 @@ $bUrl=Yii::app()->request->baseUrl;
 	<title><?php echo CHtml::encode($this->pageTitle); ?> Adminisztrációs felület</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
-	<link rel="shortcut icon" href="admin/images/logo.png" />
+	<link rel="shortcut icon" href="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/favicon.png" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_main.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_login2.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_form.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/js/ckeditor/contents.css" media="screen, projection" />
+	<!--link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/js/ckeditor/contents.css" media="screen, projection" /-->
 	<script src="<?php echo $bUrl; ?>/js/ckeditor/ckeditor.js"  > </script>
 	<script src="<?php echo $bUrl; ?>/js/ckeditor/config.js" > </script>
 </head>
 <body>
-{include file="keret_message.php"} // kiváltandó!!!
+	<?php //{include file="keret_message.php"} // kiváltandó!!! ?>
 	<div class="container" id="header">
 		<div id="logo"><img src="" alt="<?php echo CHtml::encode(Yii::app()->name); ?>" /></div>
 		<div id="menu">
@@ -34,31 +34,15 @@ $bUrl=Yii::app()->request->baseUrl;
 			<span id="logged_name">Bejelentkezve: <?php echo Yii::app()->user->name; ?></span><br class="float_right" />
 			<span id="settings">
 				<a class="settings" href="">Beállítások </a>
-				<a class="logout" href="<?php echo $bUrl; ?>/site/logout" title="Kilépés"></a>
+				<a class="logout" href="<?php echo $bUrl; ?>/admin/logout" title="Kilépés"></a>
 					<ul class="settings_dropdown">
 						<?php echo $this->renderPartial('../_settings'); ?>
 					</ul>
 			</span>
 		</span>
 	</div>
-	div class="span-5 last">
-	//almenu innet kiveve
-</div><!--  ??-->
 	<div class="container" id="header_helper">
 	</div>
-		<div id="sidebar">
-	<?php //előző sorral együtt ??-> jelig beszúrva 2013.07.0.6 oDG
-		$this->beginWidget('zii.widgets.CPortlet', array(
-			'title'=>'Műveletek',
-		));
-		$this->widget('zii.widgets.CMenu', array(
-			'items'=>$this->menu,
-			'htmlOptions'=>array('class'=>'operations'),
-		));
-		$this->endWidget();
-	?>
-	</div><!-- sidebar -->
-
 	<div class="container" id="main_content">
 		<?php echo $content; ?>
 	</div>

@@ -40,43 +40,21 @@ class ContentController extends Controller
 	 */
 	public function accessRules()
 	{
-		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		/*$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
 		if($record->authority<=99){$this->admin=true;}
 		if($record->authority>=80 && $record->authority<99){$this->fadmin=true;}else{$this->temp="A feltétel nem teljesült";}
 		if($record->authority>=80 AND $record->authority<=99){$enable_fadmin='@';} else {$enable_fadmin='XXX';}
-		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}
-		$temp=array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index'),
-				'users'=>array('*'),
-			),
+		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}*/
+		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','view','update','create','admin','delete'),
-				'users'=>array($enable_fadmin),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create','update','view'),
-				'users'=>array($enable_admin),
+				'actions'=>array('index','update','create','delete'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
-		Content::model()->temp=$temp; //hibakereséshez
-		return $temp;
-	}
 
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-	public function actionView($id)
-	{
-		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
-		if($record->authority>=80){
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));} else {throw new CHttpException(404,'Ez az oldal az Ön számára nem elérhető!');}
 	}
 
 	/**
@@ -157,20 +135,6 @@ class ContentController extends Controller
 	public function actionAthelyezendo()
 	{
 		$this->render('athelyezendo');
-	}
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new Content('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Content']))
-			$model->attributes=$_GET['Content'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
