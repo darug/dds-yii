@@ -7,21 +7,21 @@ class ContentController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
-	public $admin;
+	/*public $admin;
 	public $fadmin;
-	public $temp;
+	public $temp;*/
 	
 	public $module_info = array(
 		'name'				=>	'content',
 		'title'				=>	'Tartalmak',
 		'new'				=>	'tartalom'
 	);
-	public $update="Oldal módosítása";
+	/*public $update="Oldal módosítása";
 	public $list="Oldalak listázása";
 	public $view="Oldal tartalom megnézése";
 	public $delete="Oldal törlése";
 	public $manage="Oldalak kezelése";
-	public $create="Új oldal készítése";
+	public $create="Új oldal készítése";*/
 	/**
 	 * @return array action filters
 	 */

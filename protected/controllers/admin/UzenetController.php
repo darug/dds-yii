@@ -15,7 +15,7 @@ class UzenetController extends Controller
 		'new'				=>	'üzenet'
 	);
 
-	public $admin;
+	/*public $admin;
 	public $fadmin;
 	public $temp;
 	public $update="Üzenet módosítása";
@@ -23,7 +23,7 @@ class UzenetController extends Controller
 	public $view="Üzenet megnézése";
 	public $delete="Üzenet törlése";
 	public $manage="Üzenetek kezelése";
-	public $create="Új üzenet felvétele";
+	public $create="Új üzenet felvétele";*/
 	/**
 	 * @return array action filters
 	 */
