@@ -16,26 +16,26 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'uzenet'); ?>
+		<?php echo $form->labelEx($model,'uzenet'); ?><br />
 		<?php echo $form->textField($model,'uzenet',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'uzenet'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ervenyes'); ?>
+		<?php echo $form->labelEx($model,'ervenyes'); ?><br />
 		<?php echo $form->textField($model,'ervenyes'); ?>
 		<?php echo $form->error($model,'ervenyes'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'megjegyzes'); ?>
+		<?php echo $form->labelEx($model,'megjegyzes'); ?><br />
 		<?php echo $form->textField($model,'megjegyzes',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'megjegyzes'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->checkBox($model,'valid'); ?>
 		<?php echo $form->labelEx($model,'valid'); ?>
-		<?php echo $form->textField($model,'valid'); ?>
 		<?php echo $form->error($model,'valid'); ?>
 	</div>
 

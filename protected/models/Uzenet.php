@@ -82,7 +82,7 @@ class Uzenet extends CActiveRecord
 			'uzenet' => 'Üzenet tartalma',
 			'ervenyes' => 'Megjelenítési határidő',
 			'megjegyzes' => 'Megjegyzés',
-			'valid' => 'Érvényes (0), érvénytelen(1)',
+			'valid' => 'Érvényes',
 		);
 	}
 

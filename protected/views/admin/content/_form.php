@@ -15,31 +15,31 @@
 
 	<?php echo $form->errorSummary($model); ?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->labelEx($model,'id'); ?><br />
 		<?php echo $form->textField($model,'id'); ?>
 		<?php echo $form->error($model,'id'); ?>
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->labelEx($model,'name'); ?><br />
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'title'); ?>
+		<?php echo $form->labelEx($model,'title'); ?><br />
 		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'title'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'descrption'); ?>
+		<?php echo $form->labelEx($model,'descrption'); ?><br />
 		<?php echo $form->textField($model,'descrption',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'descrption'); ?>
 	</div>
 
 	<div class="row" id="Content_content contenteditable="true"">
-		<?php echo $form->labelEx($model,'content'); ?>
+		<?php echo $form->labelEx($model,'content'); ?><br /><br />
 		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
@@ -47,20 +47,20 @@
                 CKEDITOR.replace( 'Content[content]' );
         </script>
 	<div class="row">
-		<?php echo $form->labelEx($model,'noindex'); ?>
-		<?php echo $form->textField($model,'noindex'); ?>
+		<?php echo $form->checkBox($model,'noindex'); ?>
+		<?php echo $form->labelEx($model,'noindex'); ?>		
 		<?php echo $form->error($model,'noindex'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->checkBox($model,'is_active'); ?>
 		<?php echo $form->labelEx($model,'is_active'); ?>
-		<?php echo $form->textField($model,'is_active'); ?>
 		<?php echo $form->error($model,'is_active'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->checkBox($model,'contact_finish',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->labelEx($model,'contact_finish'); ?>
-		<?php echo $form->textField($model,'contact_finish',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'contact_finish'); ?>
 	</div>
 
