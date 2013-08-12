@@ -75,6 +75,8 @@ class ContentController extends Controller
 				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
 		}
 		
+		$this->module_info['item'] = "Új " . $this->module_info['new'] . " hozzáadása";
+		
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -99,7 +101,7 @@ class ContentController extends Controller
 				$this->redirect(array('index'));
 		}
 		
-		$this->module_info['item'] = $model->title;
+		$this->module_info['item'] = $model->title . " szerkesztése";
 	
 		$this->render('update',array(
 			'model'=>$model,

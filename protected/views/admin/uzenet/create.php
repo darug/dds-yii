@@ -12,7 +12,6 @@ $this->breadcrumbs=array(
 <?php echo $this->renderPartial('../_title'); ?>
 <div class="container center">
 	<div id="edit" style="width: 980px;">
-		<h1><?php echo $this->create; ?></h1>
 		<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
 	</div>
 </div>

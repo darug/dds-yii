@@ -73,6 +73,8 @@ class UzenetController extends Controller
 				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
 		}
 
+		$this->module_info['item'] = "Új " . $this->module_info['new'] . " hozzáadása";
+
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -97,7 +99,7 @@ class UzenetController extends Controller
 				$this->redirect(array('index'));
 		}
 
-		$this->module_info['item'] = $model->id;
+		$this->module_info['item'] = $model->id . " szerkesztése";
 
 		$this->render('update',array(
 			'model'=>$model,
