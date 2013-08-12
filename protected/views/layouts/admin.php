@@ -107,6 +107,7 @@ $(document).ready(function(){
 						<li><a href="<?php echo $bUrl?>/admin/content/">Tartalmi oldalak</a></li>
 						<li><a href="<?php echo $bUrl?>/admin/uzenet/">Üzenetek</a></li>
 						<li><a href="<?php echo $bUrl?>/admin/korzet/">Körzet</a></li>
+						<li><a href="<?php echo $bUrl?>/admin/felvilagosit/">Tájékoztatók</a></li>
 					<!--	<li><a href="{$smarty.server.PHP_SELF}?mod=ajanlatkero">Ajánlatkérések</a></li> -->
 					</ul>
 				</li>

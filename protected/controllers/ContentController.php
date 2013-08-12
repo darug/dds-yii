@@ -2,6 +2,8 @@
 
 class ContentController extends Controller
 {
+
+	
 	public function actionIndex()
 	{
 		$name = Yii::app()->getRequest()->getQuery('name');
