@@ -11,6 +11,19 @@
  */
 class Config extends CActiveRecord
 {
+	
+	protected $attributeLabels = array();
+	
+	protected function afterFind ()
+    {
+
+        $this->attributeLabels = array(
+			'value'			=>	$this->label,
+		);
+
+        parent::afterFind();
+    }
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -19,6 +32,14 @@ class Config extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return $this->attributeLabels;
 	}
 
 	/**
@@ -55,18 +76,6 @@ class Config extends CActiveRecord
 		);
 	}
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'id' => 'ID',
-			'item' => 'Item',
-			'value' => 'Value',
-			'type' => 'Type',
-		);
-	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

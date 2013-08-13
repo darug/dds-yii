@@ -12,7 +12,10 @@ class ConfigController extends Controller
 	
 	public function actionIndex()
 	{
-		$this->render('index');
+		
+		$config = Config::model()->findAll(array('order' => 'category, id'));
+		
+		$this->render('index', array('config' => $config));
 	}
 
 	public function actionSave()
