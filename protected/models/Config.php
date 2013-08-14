@@ -24,6 +24,12 @@ class Config extends CActiveRecord
         parent::afterFind();
     }
 	
+	public static function getAllConfig(){
+		
+		return self::model()->findAll(array('index' => 'id', 'order' => 'category, id'));
+		
+	}
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.

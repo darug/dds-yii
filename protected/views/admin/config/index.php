@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 <?php echo $this->renderPartial('../_title'); ?>
 <div class="container">
 	<div id="edit" style="width: 600px;">
-		<?php echo CHtml::form($this->createAbsoluteUrl($this->uniqueid) . '/save', 'post', array('enctype'=>'multipart/form-data')); ?>
+		<?php echo CHtml::form($this->createAbsoluteUrl($this->uniqueid), 'post', array('enctype'=>'multipart/form-data')); ?>
 			<?php $category_name = ''; ?>
 			<?php foreach($config as $i => $item): ?>
 			<?php if($category_name != $item->category){ ?>
