@@ -71,6 +71,7 @@ class ContentController extends Controller
 		if(isset($_POST['Content']))
 		{
 			$model->attributes=$_POST['Content'];
+			
 			if($model->save())
 				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
 		}

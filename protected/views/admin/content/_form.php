@@ -14,11 +14,7 @@
 	<p class="note">A <span class="required">*</span>-gal jelölt mezök kitöltése kötelező!</p>
 
 	<?php echo $form->errorSummary($model); ?>
-	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?><br />
-		<?php echo $form->textField($model,'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
+	<?php echo $form->hiddenField($model,'id'); ?>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?><br />

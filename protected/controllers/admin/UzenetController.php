@@ -68,17 +68,11 @@ class UzenetController extends Controller
 
 		if(isset($_POST['Uzenet']))
 		{
-		
 			$model->attributes=$_POST['Uzenet'];
-			
-			if($model->save()){
+			//Need fix: somehow the isNewRecord attribute switching to false, need manual set to true
+			$model->setIsNewRecord(true);
+			if($model->save())
 				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
-			}
-			else{
-				$this->render('create',array(
-					'model'=>$model,
-				));
-			}
 		}
 
 		$this->module_info['item'] = "Új " . $this->module_info['new'] . " hozzáadása";
