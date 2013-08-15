@@ -520,6 +520,12 @@ table#lista tr.paros{
 background-image: url('../images/admin/msg_bck.png');
 }
 
+table#lista form, table#lista form button{
+display: inline;
+margin: 0px;
+padding: 0px;
+}
+
 #edit{
 width: 1000px;
 margin: 0px auto;

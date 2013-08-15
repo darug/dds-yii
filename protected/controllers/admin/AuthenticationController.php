@@ -21,8 +21,18 @@ class AuthenticationController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
+			if($model->validate() && $model->login()){
+				
+				Yii::app()->user->setFlash('success', 'Sikeres bejelentkezés.');
+				
 				$this->redirect(Yii::app()->getBaseUrl(true) . '/admin');
+			
+			}
+			else{
+				
+				Yii::app()->user->setFlash('error', 'Hibás felhasználói név vagy jelszó.');
+				
+			}
 		}
 		
 		// display the login form

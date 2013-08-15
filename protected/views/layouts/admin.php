@@ -17,7 +17,7 @@ $bUrl=Yii::app()->request->baseUrl;
 	<script src="<?php echo $bUrl; ?>/js/ckeditor/config.js" > </script>
 </head>
 <body>
-	<?php //{include file="keret_message.php"} // kiváltandó!!! ?>
+	<?php echo $this->renderPartial('../_messages'); ?>
 	<div class="container" id="header">
 		<div id="logo"><img src="" alt="<?php echo CHtml::encode(Yii::app()->name); ?>" /></div>
 		<div id="menu">

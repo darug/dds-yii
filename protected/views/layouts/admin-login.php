@@ -14,6 +14,7 @@ $bUrl=Yii::app()->request->baseUrl;
 	<link rel="stylesheet" type="text/css" href="<?php echo $bUrl; ?>/css/admin_form.css" media="screen, projection" />
 </head>
 <body>
+	<?php echo $this->renderPartial('../_messages'); ?>
 	<div class="container" id="main_content">
 		<?php echo $content; ?>
 	</div>

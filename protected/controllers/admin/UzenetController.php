@@ -6,7 +6,7 @@ class UzenetController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	//public $layout='//layouts/column2';
+
 	public $layout='//layouts/admin';
 
 	public $module_info = array(
@@ -15,15 +15,6 @@ class UzenetController extends Controller
 		'new'				=>	'üzenet'
 	);
 
-	/*public $admin;
-	public $fadmin;
-	public $temp;
-	public $update="Üzenet módosítása";
-	public $list="Üzenetek listázása";
-	public $view="Üzenet megnézése";
-	public $delete="Üzenet törlése";
-	public $manage="Üzenetek kezelése";
-	public $create="Új üzenet felvétele";*/
 	/**
 	 * @return array action filters
 	 */
@@ -71,8 +62,19 @@ class UzenetController extends Controller
 			$model->attributes=$_POST['Uzenet'];
 			//Need fix: somehow the isNewRecord attribute switching to false, need manual set to true
 			$model->setIsNewRecord(true);
-			if($model->save())
+			
+			if($model->save()){
+				
+				Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
 				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
+				
+			}
+			else{
+				
+				Yii::app()->user->setFlash('error', 'Hibásan kitöltött űrlap.');
+				
+			}
+
 		}
 
 		$this->module_info['item'] = "Új " . $this->module_info['new'] . " hozzáadása";
@@ -97,8 +99,19 @@ class UzenetController extends Controller
 		if(isset($_POST['Uzenet']))
 		{
 			$model->attributes=$_POST['Uzenet'];
-			if($model->save())
+			
+			if($model->save()){
+				
+				Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
 				$this->redirect(array('index'));
+				
+			}
+			else{
+				
+				Yii::app()->user->setFlash('error', 'Hibásan kitöltött űrlap.');
+				
+			}
+
 		}
 
 		$this->module_info['item'] = $model->id . " szerkesztése";
@@ -118,8 +131,13 @@ class UzenetController extends Controller
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(array('index'));
+		if(!isset($_GET['ajax'])){
+			
+			Yii::app()->user->setFlash('success', 'Sikeres törlés.');
+			$this->redirect($this->createAbsoluteUrl($this->uniqueid));
+			
+		}
+		
 	}
 
 	/**

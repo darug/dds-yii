@@ -30,12 +30,14 @@ class ConfigController extends Controller
 			$item_valid = $item->validate();	
 			if($item_valid) $item->save();	
 			$valid = $item_valid && $valid;
+			
+			Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
 				
 		}
 			
 		if(!$valid){
 				
-			//hibakezelés
+			Yii::app()->user->setFlash('error', 'Egyes mezők hibás értétket tartalmaznak.');
 				
 		}
 
