@@ -41,7 +41,10 @@ class AuthenticationController extends Controller
 
 	public function actionLogout()
 	{
+		
 		Yii::app()->user->logout();
+		Yii::app()->session->open();
+		Yii::app()->user->setFlash('success', 'Sikeres kijelentkezés.');
 		$this->redirect(Yii::app()->getBaseUrl(true) . '/admin/login');
 	}
 
