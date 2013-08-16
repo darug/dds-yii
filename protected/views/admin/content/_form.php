@@ -13,7 +13,6 @@
 
 	<p class="note">A <span class="required">*</span>-gal jelölt mezök kitöltése kötelező!</p>
 
-	<?php echo $form->errorSummary($model); ?>
 	<?php echo $form->hiddenField($model,'id'); ?>
 	
 	<div class="row">

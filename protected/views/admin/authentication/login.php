@@ -16,11 +16,8 @@ $this->breadcrumbs=array(
 	<div id="login_form">
 		<h2><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/_lock.png" />Bejelentkezés</h2>
 		<?php $form=$this->beginWidget('CActiveForm', array(
-			'id'=>'login-form',
-			'enableClientValidation'=>true,
-			'clientOptions'=>array(
-				'validateOnSubmit'=>true,
-			),
+			'id'=>'User',
+			'enableClientValidation'=>false,
 		)); ?>
 			<?php echo $form->label($model,'username'); ?> <br />
 			<?php echo $form->textField($model,'username'); ?><br />

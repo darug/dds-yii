@@ -7,19 +7,19 @@ class AuthenticationController extends Controller
 	
 	public function actionLogin()
 	{
-		$model=new LoginForm;
+		$model=new User('login');
 
 		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='User')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 
 		// collect user input data
-		if(isset($_POST['LoginForm']))
+		if(isset($_POST['User']))
 		{
-			$model->attributes=$_POST['LoginForm'];
+			$model->attributes=$_POST['User'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login()){
 				
