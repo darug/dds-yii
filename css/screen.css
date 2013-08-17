@@ -45,10 +45,15 @@ p.info
 margin: 0.5em 1em 0.5em 1em;
 font: bold 1.2em Arial; color:blue;
 } 
-p.uzenet
+p.uzenet, p.red
 {
 margin: 0.5em 1em 0.5em 1em;
 font: bold 1.2em Arial; color:red;
+} 
+p.green
+{
+margin: 0.5em 1em 0.5em 1em;
+font: bold 1.2em Arial; color:green;
 } 
 a:focus, a:hover {color:#09f;}
 a {color:#06c;text-decoration:underline;}
