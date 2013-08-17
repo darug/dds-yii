@@ -9,12 +9,6 @@ $bUrl=Yii::app()->request->baseUrl;
 	<fieldset>
 	<legend align="center"	><?php echo CHtml::encode($data->title); ?></legend>
 	
-<!--	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
-	<?php echo CHtml::encode($data->name); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b> -->
-	
 	<br />
 
 	<a href="<?php if(strpos($data->link,'://')){ echo $data->link;} else {echo $bUrl.$data->link;} ?>">
@@ -22,11 +16,9 @@ $bUrl=Yii::app()->request->baseUrl;
 	</a>
 	<br />
 
-	<b><?php //echo CHtml::encode($data->getAttributeLabel('hosszu')); ?>Bővebben: <br></b>
-	<?php echo $data->hosszu; ?>
-	<br />
-
-	
+	<a class="more" href="#">Bővebben</a>
+	<div class="long_text"><?php echo $data->hosszu; ?></div>
+		
 </fieldset>
 
 </div>
