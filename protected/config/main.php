@@ -25,22 +25,23 @@ return array(
 			'password'=>'generate',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths'=>array(
+                'application.gii',   // a path alias
+            ),
 		),
 	),
 
 	// application components
 	'components'=>array(
 		'user'=>array(
-			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 			'loginUrl'=>array('admin/login'),
 		),
-		// uncomment the following to enable URLs in path-format
-		//* gii futtatasahoz kommentbe rakni 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'	=> false,
 			'rules'=>array(
+				'gii'										=>	'gii',
 				''											=>	'content/home',
 				'admin/content/delete/id/<id:\d+>'			=>	'admin/content/delete',
 				'admin/'									=>	'admin/admin/index',
