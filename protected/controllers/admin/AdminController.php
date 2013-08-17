@@ -3,25 +3,28 @@
 class AdminController extends Controller
 {
 	
-	 public $layout='//layouts/admin';
-	 /**
-	 * Declares class-based actions.
-	 */
+	public $layout='//layouts/admin';
 
-	public function actions()
+	public function filters()
 	{
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
+			'accessControl', // perform access control for CRUD operations
+		);
+	}
+
+	public function accessRules()
+	{
+
+		return array(
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('athelyezendo','index'),
+				'users'=>array('@'),
 			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
+			array('deny',  // deny all users
+				'users'=>array('*'),
 			),
 		);
+
 	}
 
 	/**
@@ -35,26 +38,6 @@ class AdminController extends Controller
 	
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		//$this->render('index');
-			//$record=Content::model()->findByAttributes(array('contact_finish'=>'index'));//a home helyére a megfelelő name írandó
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		
-		/*$url = Yii::app()->getRequest()->getQuery('url');
-		
-		$content = Content::model()->find(array(
-		    'condition'=>'url=:url',
-		    'params'=>array(':url'=>$url)
-		));
-		if($content === NULL){
-			$content = Content::model()->find(array(
-		    'condition'=>'url=:url',
-		    'params'=>array(':url'=>'home')
-		));} 
-		if($content === NULL) throw new CHttpException(404, "A keresett tartalom nem található");
-		$this->render('index', array('record' => $content));*/
 		$this->render('index');
 	}
 
@@ -73,8 +56,4 @@ class AdminController extends Controller
 		}
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	
 }

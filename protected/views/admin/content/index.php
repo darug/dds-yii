@@ -6,14 +6,10 @@ $this->breadcrumbs=array(
 	'Contents',
 );
 
-$this->menu=array(
-	array('label'=>$this->create, 'url'=>array('create')),
-	array('label'=>$this->manage, 'url'=>array('admin')),
-);
 ?>
+
+<?php echo $this->renderPartial('../_title'); ?>
 <div class="container">
-		<h1><?php echo $this->list ?></h1>
-		<form action="{$smarty.server.PHP_SELF}?mod=statikus&amp;task=set_radio" method="post" />
 		<table id="lista" >
 		<tr>
 			<th width="4%">ID</th>

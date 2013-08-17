@@ -2,28 +2,18 @@
 /* @var $this UzenetController */
 /* @var $data Uzenet */
 ?>
-
-<div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('uzenet')); ?>:</b>
-	<?php echo CHtml::encode($data->uzenet); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ervenyes')); ?>:</b>
-	<?php echo CHtml::encode($data->ervenyes); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('megjegyzes')); ?>:</b>
-	<?php echo CHtml::encode($data->megjegyzes); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('valid')); ?>:</b>
-	<?php echo CHtml::encode($data->valid); ?>
-	<br />
-
-
-</div>
+		<tr>
+			<td><?php echo $data->id; ?></td>
+			<td><?php echo CHtml::link(CHtml::encode($data->uzenet), array('update', 'id'=>$data->id)); ?></td>
+			<td><?php echo CHtml::encode($data->megjegyzes); ?></td>
+			<td><?php echo CHtml::encode($data->ervenyes); ?></td>
+			<td class="button-column">
+				<a title="Szerkesztés" href="<?php echo $this->createAbsoluteUrl($this->uniqueid); ?>/update/id/<?php echo $data->id?>"><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/icon_edit.png" alt="Szerkesztés" /></a>
+				
+				<form action="<?php echo $this->createAbsoluteUrl($this->uniqueid); ?>/delete/id/<?php echo $data->id?>" method="post">
+					<button onclick="return confirm('A(z) <?php echo $this->module_info['new']; ?> véglegesen törlésre fog kerülni. Biztosan folytatja?')"type="submit">
+						<img src="<?php echo Yii::app()->getBaseUrl(true); ?>/images/admin/icon_del.png" alt="Törlés" />
+					</button>
+				</form>
+			</td>
+		</tr>

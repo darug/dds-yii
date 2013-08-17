@@ -7,12 +7,11 @@ $this->breadcrumbs=array(
 	'Create',
 );
 
-$this->menu=array(
-	array('label'=>$this->list, 'url'=>array('index')),
-	array('label'=>$this->manage, 'url'=>array('admin')),
-);
 ?>
 
-<h1><?php echo $this->create ?></h1>
-
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('../_title'); ?>
+<div class="container center">
+	<div id="edit" style="width: 980px;">
+		<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+	</div>
+</div>

@@ -18,14 +18,12 @@
  */
 class Content extends CActiveRecord
 {
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Content the static model class
 	 */
-	public $temp; 
-	public $admin;
-	public $fadmin;
 	
 	public static function model($className=__CLASS__)
 	{
@@ -47,26 +45,37 @@ class Content extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, title, descrption, contact_finish', 'required'),
+			array('title', 'required', 'message' => '{attribute} kitöltése kötelező.'),
+			array('title', 'unique', 'on' => array('insert', 'update'), 'message' => 'Ilyen érték már szerepel az adatbázisban.'),
+			array('name', 'createUrl', 'on' => array('insert', 'update')),
 		//	array('content','ckeditor'),
-			array('noindex, is_active', 'numerical', 'integerOnly'=>true),
-			array('name, title, descrption, contact_finish', 'length', 'max'=>255),
-			array('content', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, url, name, noindex, is_active, contact_finish', 'safe', 'on'=>'search'),
+			array('noindex, is_active, contact_finish', 'boolean'),
+			array('title', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.'),
+			array('descrption', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.')
 		);
 	}
-
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-		);
+	
+	public function createUrl(){
+		
+		$string_output = '';
+		
+		$source = array( "í", "é", "á", "ű", "ő", "ú", "ö", "ü", "ó", "Í", "É", "Á", "Ű", "Ő", "Ú", "Ö", "Ü", "Ó", " ", "-", "/", "<", ">", "#", "&", "@", "{", "}", "[", "]", "$", "\"", "'", "\\", ";", "*", "+" );
+   		$output =  array( "i", "e", "a", "u", "o", "u", "o", "u", "o", "I", "E", "A", "U", "O", "U", "O", "U", "O", "_", "_", "", "",  "",  "",  "",  "",  "",  "",  "",  "",  "",  "",   "",   "",   "",  "",  "" );
+        
+        $name = str_replace($source, $output, $this->title);
+        $name = strtolower($name);
+        
+        $pattern="/([a-z0-9]|_)*/";
+        preg_match_all($pattern, $name, $outputarray, PREG_SET_ORDER);
+        foreach ($outputarray as $item){
+          $string_output .= $item[0];
+        }
+        $string_output=preg_replace("/_{2,}/","_",$string_output);            
+        $string_output=preg_replace("/^_/","",$string_output);
+        $string_output=preg_replace("/_$/","",$string_output);
+		
+		$this->name = $string_output;
+		
 	}
 
 	/**
@@ -86,25 +95,4 @@ class Content extends CActiveRecord
 		);
 	}
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('noindex',$this->noindex);
-		$criteria->compare('is_active',$this->is_active);
-		$criteria->compare('contact_finish',$this->contact_finish);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
 }
