@@ -51,13 +51,10 @@ class Uzenet extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('uzenet', 'required'),
-			array('valid', 'numerical', 'integerOnly'=>true),
-			array('uzenet, megjegyzes', 'length', 'max'=>255),
-			array('ervenyes', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, uzenet, ervenyes, megjegyzes, valid', 'safe', 'on'=>'search'),
+			array('uzenet, ervenyes', 'required', 'message' => '{attribute} kitöltése kötelező.'),
+			array('valid', 'boolean'),
+			array('uzenet, megjegyzes', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.'),
+			array('ervenyes', 'date', 'format' => 'yyyy-MM-dd', 'message' => 'Nem megfelelő dátumformátum. Helyes formátum: ÉÉÉÉ-HH-NN'),
 		);
 	}
 

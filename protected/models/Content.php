@@ -18,6 +18,7 @@
  */
 class Content extends CActiveRecord
 {
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -44,13 +45,13 @@ class Content extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'required'),
-			array('title', 'unique', 'on' => array('insert', 'update')),
+			array('title', 'required', 'message' => '{attribute} kitöltése kötelező.'),
+			array('title', 'unique', 'on' => array('insert', 'update'), 'message' => 'Ilyen érték már szerepel az adatbázisban.'),
 			array('name', 'createUrl', 'on' => array('insert', 'update')),
 		//	array('content','ckeditor'),
 			array('noindex, is_active, contact_finish', 'boolean'),
-			array('title, descrption', 'length', 'max'=>255),
-			array('content', 'safe'),
+			array('title', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.'),
+			array('descrption', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.')
 		);
 	}
 	

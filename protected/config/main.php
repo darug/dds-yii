@@ -54,8 +54,7 @@ return array(
 		),  // */ 
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
 		'errorHandler'=>array(
-			// use 'site/error' action to display errors
-			'errorAction'=>'site/error',
+			'errorAction'=>'content/error',
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
