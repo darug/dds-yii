@@ -12,12 +12,13 @@ class ConfigController extends Controller
 	
 	public function actionIndex()
 	{
-		
+		//echo "asdfgg<br>";
 		$config = Config::model()->getAllConfig();
-		
-		if(isset($_POST['Config'])) $this->actionSave($config);
+
+		//if(isset($_POST['Config'])) $this->actionSave($config);
 		
 		$this->render('index', array('config' => $config));
+//		echo "121345<br>";
 	}
 
 	public function actionSave($config)
@@ -30,8 +31,6 @@ class ConfigController extends Controller
 			$item_valid = $item->validate();	
 			if($item_valid) $item->save();	
 			$valid = $item_valid && $valid;
-			
-			Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
 				
 		}
 			
@@ -39,6 +38,11 @@ class ConfigController extends Controller
 				
 			Yii::app()->user->setFlash('error', 'Egyes mezők hibás értétket tartalmaznak.');
 				
+		}
+		else{
+			
+			Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
+			
 		}
 
 		$this->redirect('config/index');

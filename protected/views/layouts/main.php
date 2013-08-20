@@ -35,7 +35,7 @@ $bUrl=Yii::app()->request->baseUrl;
 
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Kezdőoldal', 'url'=>array('/home')),
+				array('label'=>'Kezdőoldal', 'url'=>array('/dr_szeiffert_gabor_haziorvos_honlapja')),
 				array('label'=>'Rendelési idő', 'url'=>array('/rendel')),
 				array('label'=>'Körzet ellenőrzés', 'url'=>array('/korzet/index')),
 				array('label'=>'Tájékoztatók és ismertetők', 'url'=>array('/felvilagosit/index')),
