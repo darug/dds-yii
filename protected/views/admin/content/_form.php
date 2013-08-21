@@ -53,9 +53,9 @@
 		<?php echo $form->error($model,'is_active'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->checkBox($model,'contact_finish',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->labelEx($model,'contact_finish'); ?>
+	<div class="row"> <!--checkbox -> textfield modositva 2013.08.21 oDG-->
+		<?php echo $form->labelEx($model,'contact_finish')." (menüpont címe)"; ?>
+		<?php echo $form->textfield($model,'contact_finish',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'contact_finish'); ?>
 	</div>
 

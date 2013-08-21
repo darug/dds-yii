@@ -49,9 +49,9 @@ class Content extends CActiveRecord
 			array('title', 'unique', 'on' => array('insert', 'update'), 'message' => 'Ilyen érték már szerepel az adatbázisban.'),
 			array('name', 'createUrl', 'on' => array('insert', 'update')),
 		//	array('content','ckeditor'),
-			array('noindex, is_active, contact_finish', 'boolean'),
+			array('noindex, is_active', 'boolean'),
 			array('title', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.'),
-			array('descrption', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.')
+			array('descrption, contact_finish', 'length', 'max'=>254, 'tooLong' => '{attribute} értéke túl hosszú.')
 		);
 	}
 	
