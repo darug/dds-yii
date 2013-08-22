@@ -48,7 +48,7 @@ $bUrl=Yii::app()->request->baseUrl;
 		for($i=0;$i<$n;$i++){
 			if(strpos($rec[$i]['link'],'://')){$href=$rec[$i]['link'];}
 			else{$href=$bUrl.'/'.$rec[$i]['link'];}
-			$menu2.="<li><a href=\"$href\">".$rec[$i]['title']." </a></li>\n";
+			$menu2.="<li><a href=\"$href\"> ".$rec[$i]['title']." </a></li>\n";
 		}	
 ?>
 		<div id="menu">
@@ -60,6 +60,7 @@ $bUrl=Yii::app()->request->baseUrl;
 						<?php echo $menu2; ?>
 				</ul> 
 				</li>
+				<li><a href="<?php echo $bUrl; ?>/korzet/index"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Körzet ellenőrzés </a></li>
 				<!-- ide kell beszurni az uzenet menu-t!! -->
 			 </ul>
 		</div>
