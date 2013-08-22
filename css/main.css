@@ -80,6 +80,54 @@ body
 	text-decoration:none;
 }
 
+#menu ul li ul.dropdown{
+z-index: 999;
+position: relative;
+height: auto;
+display: none;
+top: 10px;
+width: 300px;
+margin: 0px;
+padding: 15px 0px;
+left: 0px;
+list-style-type: none;
+background-color: #f2f2f2;
+border: 1px solid #ada9a9;
+filter:alpha(opacity=90);
+-moz-opacity:0.9;
+opacity: 0.9;
+-webkit-border-radius: 0px 0px 15px 0px;
+-moz-border-radius: 0px 0px 15px 0px;
+border-radius: 0px 0px 15px 0px;
+}
+
+#menu ul li:hover ul{
+display: block;
+}
+
+#menu ul li ul.dropdown li{
+width: 300px;
+clear: both;
+border: 0px;
+height: 30px;
+display: inline;
+margin: 0px;
+padding: 0px;
+}
+
+#menu ul li ul.dropdown li a{
+display: block;
+height: 30px;
+width: 300px;
+line-height: 30px;
+padding: 0px 10px 0px 30px;
+background-repeat: no-repeat;
+background-position: bottom left;
+background-image: url('../images/admin/_menu_edit_content.png');
+color: blue;
+}
+
+
 div.flash-error, div.flash-notice, div.flash-success
 {
 	padding:.8em;

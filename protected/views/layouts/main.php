@@ -33,16 +33,40 @@ $bUrl=Yii::app()->request->baseUrl;
 
 	<div id="mainmenu">
 
-		<?php
+		<?php //viszintesen a Content-bolautomatikusan bővülő menü
 		$record = Content::model()->findAll();
 		$n=count($record);
-		for($i=0;$i<$n;$i++){if($record[$i]['contact_finish']>''){$menu[]=array('label'=>$record[$i]['contact_finish'], 'url'=>array('/'.$record[$i]['name']));}}
-		$menu[]=array('label'=>'Tájékoztatók és ismertetők', 'url'=>array('/felvilagosit/index'));
-		$menu[]=array('label'=>'Elérhetőség', 'url'=>array('/site/contact'));
-		
+		$menu1="";
+		for($i=1;$i<$n;$i++){if($record[$i]['contact_finish']>'')
+		{
+			$menu1.="<li><a href=\"$bUrl/".$record[$i]['name']."\"><img src=\"$bUrl/images/admin/_menu_content.png\" /> ".$record[$i]['contact_finish']."</a></li>\n";
+		}
+		}
+		$rec = Felvilagosit::model()->findAll(); //automatikusan bővülő dropdown menü
+		$n=count($rec);
+		$menu2="";
+		for($i=0;$i<$n;$i++){
+			if(strpos($rec[$i]['link'],'://')){$href=$rec[$i]['link'];}
+			else{$href=$bUrl.'/'.$rec[$i]['link'];}
+			$menu2.="<li><a href=\"$href\">".$rec[$i]['title']." </a></li>\n";
+		}	
+?>
+		<div id="menu">
+			<ul>
+				<li><a href="<?php echo $bUrl.'/'.$record[0]['name']; ?>"><img src="<?php echo $bUrl; ?>/images/admin/_menu_home.png" /> Kezdőlap</a></li>
+				<?php echo $menu1; ?>
+			    <li><a href="<?php echo $bUrl; ?>/felvilagosit/index"><img src="<?php echo $bUrl; ?>/images/admin/_menu_content.png" /> Tájékoztatas <img src="<?php echo $bUrl; ?>/images/admin/_menu_dropdown_arrow.png" /> </a>
+					<ul class="dropdown">
+						<?php echo $menu2; ?>
+				</ul> 
+				</li>
+				<!-- ide kell beszurni az uzenet menu-t!! -->
+			 </ul>
+		</div>
+<?php	/*	
 		$this->widget('zii.widgets.CMenu',array(
 			'items'=>$menu,
-		)); ?>
+		));*/ ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php /*$this->widget('zii.widgets.CBreadcrumbs', array(
