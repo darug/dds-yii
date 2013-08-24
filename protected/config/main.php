@@ -32,7 +32,7 @@ return array(
 	),
 
 	// application components
-	'components'=>array(
+'components'=>array(
 		'user'=>array(
 			'allowAutoLogin'=>true,
 			'loginUrl'=>array('admin/login'),
@@ -52,7 +52,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'				=>	'<controller>/<action>',
 				'<name:\w+>'								=>	'content/index',
 			),
-		),  // */ 
+		),  
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
 		'errorHandler'=>array(
 			'errorAction'=>'content/error',
