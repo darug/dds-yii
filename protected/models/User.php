@@ -15,9 +15,6 @@ class User extends CActiveRecord
 {
 	public $temp; 
 	public $admin;
-	
-	private $_identity;
-	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -44,12 +41,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password', 'required'),
-			array('id, authority, rememberMe', 'boolean'),
+			array('id, username,title, password, authority', 'required'),
+			array('id, authority, rememberMe', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
 			array('password,title', 'length', 'max'=>255),
-			array('username, password', 'required'),
-			array('password', 'authenticate', 'on' => 'login'),
+	//		array('lastmod', 'lenght', 'max' => 20),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('id, username, password, title, authority, lastmod, rememberMe', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,47 +70,36 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username'=>'Felhasználói név:',
-			'password'=>'Jelszó:',
-			'rememberMe'=>'Emlékezz rám',
+			'username' => 'Fehasználói név',
+			'password' => 'Password',
 			'title' => 'Leírás',
 			'authority' => 'Jogosultság (guest<80, oldal tulajdonos<91,',
 			'lastmod' => 'Utolsó mődosítás ideje',
+			'rememberMe' => 'Remember Me',
 		);
 	}
 
 	/**
-	 * Authenticates the password.
-	 * This is the 'authenticate' validator as declared in rules().
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function authenticate($attribute,$params)
+	public function search()
 	{
-		if(!$this->hasErrors())
-		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
-			$this->_identity->authenticate();
-		}
-	}
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
-	/**
-	 * Logs in the user using the given username and password in the model.
-	 * @return boolean whether login is successful
-	 */
-	public function login()
-	{
-		if($this->_identity===null)
-		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
-			$this->_identity->authenticate();
-		}
-		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
-		{
-			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
-			Yii::app()->user->login($this->_identity,$duration);
-			return true;
-		}
-		else
-			return false;
-	}
+		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('title',$this->title,true);
+		$criteria->compare('authority',$this->authority);
+		$criteria->compare('lastmod',$this->lastmod,true);
+		$criteria->compare('rememberMe',$this->rememberMe);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 }

@@ -25,48 +25,42 @@ return array(
 			'password'=>'generate',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
-			'generatorPaths'=>array(
-                'application.gii',   // a path alias
-            ),
 		),
 	),
 
 	// application components
-'components'=>array(
+	'components'=>array(
 		'user'=>array(
+			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-			'loginUrl'=>array('admin/login'),
 		),
+		// uncomment the following to enable URLs in path-format
+		//* gii futtatasahoz kommentbe rakni 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'	=> false,
 			'rules'=>array(
-				'gii'										=>	'gii',
-				''											=>	'content/home',
-				'admin/content/delete/id/<id:\d+>'			=>	'admin/content/delete',
-				'admin/'									=>	'admin/admin/index',
-				'admin/login'								=>	'admin/authentication/login',
-				'admin/logout'								=>	'admin/authentication/logout',
-				'<controller:\w+>/<id:\d+>'					=>	'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'	=>	'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'				=>	'<controller>/<action>',
-				'<name:\w+>'								=>	'content/index',
+				'admin/'=>'admin/admin/index',
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<name:\w+>'=>'content/index',
 			),
-		),  
+		),  // */ 
 		'db'=>require(dirname(__FILE__) . '/db_prod.php'),
 		'errorHandler'=>array(
-			'errorAction'=>'content/error',
+			// use 'site/error' action to display errors
+			'errorAction'=>'site/error',
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
-				/*array(
-					'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
-					//'levels'=>'error, warning',
-					'ipFilters'=>array('127.0.0.1'),
-				),*/
+				array(
+					'class'=>'CFileLogRoute',
+					'levels'=>'error, warning',
+				),
 				// uncomment the following to show log messages on web pages
-				/*
+				//* 
 				array(
 					'class'=>'CWebLogRoute',
 				),

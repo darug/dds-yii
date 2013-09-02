@@ -7,8 +7,8 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'content',
-	'enableAjaxValidation'=>true,
+	'id'=>'content-form',
+	'enableAjaxValidation'=>false,
 )); ?>
 
 	<p class="note">A <span class="required">*</span>-gal jelölt mezök kitöltése kötelező!</p>

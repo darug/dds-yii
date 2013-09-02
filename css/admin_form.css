@@ -62,11 +62,11 @@ a.button:hover{
 color: #333333;
 }
 
-input.error, select.error, textarea.error{
+input.text_error, select.text_error, textarea.text_error{
 border: 3px solid #d72727;
 }
 
-.errorMessage{
+.urlap_mezo_hiba{
 color: #db0f0f;
 }
 

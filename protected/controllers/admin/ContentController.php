@@ -7,13 +7,15 @@ class ContentController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
-	
-	public $module_info = array(
-		'name'				=>	'content',
-		'title'				=>	'Tartalmak',
-		'new'				=>	'tartalom'
-	);
-
+	public $admin;
+	public $fadmin;
+	public $temp;
+	public $update="Oldal módosítása";
+	public $list="Oldalak listázása";
+	public $view="Oldal tartalom megnézése";
+	public $delete="Oldal törlése";
+	public $manage="Oldalak kezelése";
+	public $create="Új oldal készítése";
 	/**
 	 * @return array action filters
 	 */
@@ -32,17 +34,43 @@ class ContentController extends Controller
 	 */
 	public function accessRules()
 	{
-	
-		return array(
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority<=99){$this->admin=true;}
+		if($record->authority>=80 && $record->authority<99){$this->fadmin=true;}else{$this->temp="A feltétel nem teljesült";}
+		if($record->authority>=80 AND $record->authority<=99){$enable_fadmin='@';} else {$enable_fadmin='XXX';}
+		if($record->authority==99){$enable_admin='admin'; $this->admin=true;} else {$enable_admin='xx';}
+		$temp=array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index'),
+				'users'=>array('*'),
+			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','update','create','delete'),
-				'users'=>array('@'),
+				'actions'=>array('index','view','update','create','admin','delete'),
+				'users'=>array($enable_fadmin),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete','create','update','view'),
+				'users'=>array($enable_admin),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+		Content::model()->temp=$temp; //hibakereséshez
+		return $temp;
+	}
 
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionView($id)
+	{
+		$record=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if($record->authority>=80){
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));} else {throw new CHttpException(404,'Ez az oldal az Ön számára nem elérhető!');}
 	}
 
 	/**
@@ -59,23 +87,10 @@ class ContentController extends Controller
 		if(isset($_POST['Content']))
 		{
 			$model->attributes=$_POST['Content'];
-			
-			if($model->save()){
-				
-				Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
-				$this->redirect($this->createAbsoluteUrl($this->uniqueid));
-				
-			}
-			else{
-				
-				Yii::app()->user->setFlash('error', 'Hibásan kitöltött űrlap.');
-				
-			}
-			
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
 		}
-		
-		$this->module_info['item'] = "Új " . $this->module_info['new'] . " hozzáadása";
-		
+
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -96,22 +111,10 @@ class ContentController extends Controller
 		if(isset($_POST['Content']))
 		{
 			$model->attributes=$_POST['Content'];
-			if($model->save()){
-				
-				Yii::app()->user->setFlash('success', 'A változtatások mentésre kerültek.');
-				$this->redirect(array('index'));
-				
-			}
-			else{
-				
-				Yii::app()->user->setFlash('error', 'Hibásan kitöltött űrlap.');
-				
-			}
-			
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
 		}
-		
-		$this->module_info['item'] = $model->title . " szerkesztése";
-	
+
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -124,18 +127,11 @@ class ContentController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		
-		
 		$this->loadModel($id)->delete();
-		
+
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax'])){
-			
-			Yii::app()->user->setFlash('success', 'Sikeres törlés.');
-			$this->redirect($this->createAbsoluteUrl($this->uniqueid));
-			
-		}
-		
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**
@@ -151,6 +147,20 @@ class ContentController extends Controller
 	public function actionAthelyezendo()
 	{
 		$this->render('athelyezendo');
+	}
+	/**
+	 * Manages all models.
+	 */
+	public function actionAdmin()
+	{
+		$model=new Content('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Content']))
+			$model->attributes=$_GET['Content'];
+
+		$this->render('admin',array(
+			'model'=>$model,
+		));
 	}
 
 	/**
